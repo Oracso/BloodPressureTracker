@@ -15,7 +15,7 @@ struct LogDetailView: View {
     
     @ObservedObject var log: Log
     
-    @EnvironmentObject var vem: ViewEditingManager
+//    @EnvironmentObject var vem: ViewEditingManager
     
     
     var body: some View {
@@ -23,12 +23,17 @@ struct LogDetailView: View {
         
         List {
 
+            Text("Systolic: \(log.systolic)")
+            Text("Diastolic: \(log.diastolic)")
+            Text("Pulse: \(log.pulse)")
+            Text("Arm: \(log.unwrappedArm)")
+            Text("Date: \(log.formattedDate)")
 
-            if vem.editMode == .inactive {
-                Text(log.unwrappedName.capitalized)
-            } else {
-                TextField("New Name", text: $log.name.defaultValue(""))
-            }
+//            if vem.editMode == .inactive {
+//                Text(log.unwrappedName.capitalized)
+//            } else {
+//                TextField("New Name", text: $log.name.defaultValue(""))
+//            }
             
             
 
@@ -62,37 +67,13 @@ struct LogDetailView: View {
 
             
 
-            Section {
-                ForEach(log.XXXArray) { XXX in
-                    NavigationLink {
-                        XXXDetailView(XXX)
-                    } label: {
-                        GenericViewManager.tagListRowView(XXX)
-                    }
-//                    .disabled(vem.isEditing)
-
-                }
-                
-            } header: {
-                HStack {
-                    Text("XXX")
-                    Spacer()
-                    if vem.editMode == .active {
-                        NavigationLink {
-                            ToManyListParentView(object: log, selectedObjects: $log.XXX, toManyFilterType: .manyToMany, relationshipName: .XXX)
-                        } label: {
-                            Image(systemName: "plus")
-                        }
-                    }   
-                }
-            }
             
                 
 
             
         }
         
-        .navigationTitle(log.unwrapped<#property#>.capitalized)
+        .navigationTitle(log.formattedDate)
 
         
     }
