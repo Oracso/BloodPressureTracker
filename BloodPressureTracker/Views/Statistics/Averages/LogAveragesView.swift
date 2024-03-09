@@ -76,6 +76,7 @@ struct LogAveragesView: View {
     NavigationStack {
         List {
             LogAveragesView()
+                .environmentObject(AppDataStore(CoreDataPreviewManager.previewManager.context))
                 .environmentObject(StatisticsManager())
         }
     }

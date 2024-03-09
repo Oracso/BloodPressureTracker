@@ -18,6 +18,22 @@ struct StatisticsView: View {
                     LogAveragesView()
                 }
                 
+                
+                
+                Section("Chart:") {
+                    
+                    
+                    StatisticsChartParentView()
+                    
+                    
+                    
+                    
+                    
+                }
+                
+                
+                
+                
                 Section("Charts:") {
                     
                     //                LineGraphParentView(allLogs: $logDataObject.logArray, filterTypes: [.date])
@@ -56,4 +72,6 @@ struct StatisticsView: View {
 
 #Preview {
     StatisticsView()
+        .environmentObject(AppDataStore(CoreDataPreviewManager.previewManager.context))
+        .environmentObject(StatisticsManager())
 }
