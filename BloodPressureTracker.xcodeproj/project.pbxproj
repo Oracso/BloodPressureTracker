@@ -53,7 +53,6 @@
 		D33328ED2B74EBC900E8F0E2 /* StatisticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328EC2B74EBC900E8F0E2 /* StatisticsManager.swift */; };
 		D33328EF2B74EFFC00E8F0E2 /* StatisticsCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328EE2B74EFFC00E8F0E2 /* StatisticsCalculator.swift */; };
 		D33328F12B74F03C00E8F0E2 /* DifferenceRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328F02B74F03C00E8F0E2 /* DifferenceRecord.swift */; };
-		D362A6C32B9CF8A400A1E29B /* TTTT.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362A6C22B9CF8A400A1E29B /* TTTT.swift */; };
 		D3C5D9E72B70E7C1007963FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C5D9E62B70E7C1007963FA /* Assets.xcassets */; };
 		D3C5D9EB2B70E7C1007963FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C5D9EA2B70E7C1007963FA /* Preview Assets.xcassets */; };
 		D3F2D4A02B7279CC00E34784 /* ConfoundersSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2D49F2B7279CC00E34784 /* ConfoundersSectionView.swift */; };
@@ -109,7 +108,6 @@
 		D33328EC2B74EBC900E8F0E2 /* StatisticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsManager.swift; sourceTree = "<group>"; };
 		D33328EE2B74EFFC00E8F0E2 /* StatisticsCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCalculator.swift; sourceTree = "<group>"; };
 		D33328F02B74F03C00E8F0E2 /* DifferenceRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferenceRecord.swift; sourceTree = "<group>"; };
-		D362A6C22B9CF8A400A1E29B /* TTTT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTT.swift; sourceTree = "<group>"; };
 		D3C5D9DF2B70E7C0007963FA /* BloodPressureTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BloodPressureTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C5D9E62B70E7C1007963FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3C5D9E82B70E7C1007963FA /* BloodPressureTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BloodPressureTracker.entitlements; sourceTree = "<group>"; };
@@ -270,7 +268,6 @@
 			isa = PBXGroup;
 			children = (
 				D32048102B7225710034BA4C /* TabBarView.swift */,
-				D362A6C22B9CF8A400A1E29B /* TTTT.swift */,
 				D33328E42B74C49B00E8F0E2 /* Statistics */,
 				D32047F82B7225710034BA4C /* GenericViews */,
 				D32048092B7225710034BA4C /* EntityViews */,
@@ -493,7 +490,6 @@
 				D320483A2B7225720034BA4C /* JSONManager.swift in Sources */,
 				D320482E2B7225710034BA4C /* BloodPressureTrackerModel.xcdatamodeld in Sources */,
 				D32048272B7225710034BA4C /* EntityType.swift in Sources */,
-				D362A6C32B9CF8A400A1E29B /* TTTT.swift in Sources */,
 				D32048582B722CA20034BA4C /* OptionalFunc.swift in Sources */,
 				D320481E2B7225710034BA4C /* LogObjectStore.swift in Sources */,
 				D32048362B7225710034BA4C /* ExampleDataGenerator.swift in Sources */,
