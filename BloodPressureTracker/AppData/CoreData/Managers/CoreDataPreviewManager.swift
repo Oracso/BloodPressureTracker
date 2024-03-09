@@ -33,7 +33,7 @@ struct CoreDataPreviewManager {
     
     func initExampleData() {
 
-//        createAllExampleObjects([.log], 5)
+        createAllExampleObjects([.log], 5)
         
         // Add entity relationships
 
@@ -52,7 +52,7 @@ struct CoreDataPreviewManager {
         var examples: [T] = []
         
         let edg = ExampleDataGenerator()
-        let randomisedObjects = edg.createAllRandomisedObjects(entityType.withSpaces, quantity)
+        let randomisedObjects = edg.createAllRandomisedObjects(entityType.rawValue, quantity)
         
         for random in randomisedObjects {
             examples.append(createObjectFromRandomisedObjectData(entityType: entityType, random))
@@ -68,7 +68,7 @@ struct CoreDataPreviewManager {
         
         switch entityType {
         case .log:
-            return modifier.createLog() as! T
+            return modifier.createLog(date: ran.indexedDate, diastolic: ran.smallInt, systolic: ran.smallInt, pulse: ran.smallInt, arm: .allCases.randomElement()!, confounders: [:], notes: nil) as! T
         }
         
     }
@@ -142,17 +142,6 @@ struct CoreDataPreviewManager {
     }
     
     
-    
-    // MARK: - ObjectPlaceholder Examples
-    
-    
-    
-    static func allEntityObjectPlaceholderExamples(_ entityType: EntityType) -> [ObjectPlaceholderDetails] {
-        let objects = self.fetchAllPreviewObjects(entityType)
-        return ObjectPlaceholderDetailsManager().createAllEntityObjectPlaceholderDetails(objects)
-    }
-
-
 
 
     

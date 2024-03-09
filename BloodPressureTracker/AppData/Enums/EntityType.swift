@@ -11,16 +11,10 @@ import CoreData
 
 enum EntityType: String, Identifiable, CaseIterable, Codable {
     case log = "Log"
-    case XXX = "XXX"
     var id: Self { self }
 }
 
 
-extension EntityType {
-    var withSpaces: String {
-        self.rawValue.insertSpacesBeforeUppercaseLetters()
-    }
-}
 
 
 extension EntityType {
@@ -28,8 +22,6 @@ extension EntityType {
         switch self {
         case .log:
             return Log.self
-        case .XXX:
-            return XXX.self
         }
     }
 
@@ -37,8 +29,6 @@ extension EntityType {
         switch classType {
         case is Log.Type:
             self = .log
-        case is XXX.Type:
-            self = .XXX
         default:
             fatalError("Unsupported NSManagedObject Type")
         }
@@ -50,8 +40,6 @@ extension EntityType {
         switch self {
         case .log:
             return "Logs"
-        case .XXX:
-            return "XXX"
         }
     }
 }

@@ -29,10 +29,21 @@ struct CoreDataModifier {
     }
     
     
-    func createLog() -> Log {
-        let example = Log(context: context)
-        example.id = UUID()
-        return example
+    func createLog(date: Date = .now, diastolic: Int = 0, systolic: Int = 0, pulse: Int = 0, arm: ArmType = .right, confounders: [String:String] = [:], notes: String? = nil) -> Log {
+        let log = Log(context: context)
+        log.id = UUID()
+        log.date = date
+        log.diastolic = Int64(diastolic)
+        log.systolic = Int64(systolic)
+        log.pulse = Int64(pulse)
+        log.arm = arm.rawValue
+        if confounders.isEmpty {
+            log.confounders = nil
+        } else {
+            log.confounders = JSONManager.dictionaryToJsonString(confounders)
+        }
+        log.notes = notes
+        return log
     }
     
     

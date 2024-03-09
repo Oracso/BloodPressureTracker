@@ -20,8 +20,6 @@ struct GenericViewManager {
             switch unwrappedEntityType {
             case .log:
                 LogDetailView(object.castedAsLog())
-            case .XXX:
-                XXXDetailView(object.castedAsXXX())
             }
         } else {
             nilDetailView()
@@ -61,8 +59,6 @@ extension GenericViewManager {
             switch unwrappedEntityType {
             case .log:
                 AddLogView(object.castedAsLog())
-            case .XXX:
-                AddXXXView(object.castedAsXXX())
             }
         }
         
@@ -87,8 +83,6 @@ extension GenericViewManager {
             switch unwrappedEntityType {
             case .log:
                 logListRowView(object.castedAsLog())
-            case .XXX:
-                XXXListRowView(object.castedAsXXX())
             }
         } else {
             nilListRowView()
@@ -100,16 +94,19 @@ extension GenericViewManager {
     
     static func logListRowView(_ object: Log) -> some View {
         HStack {
-            Text(object.unwrappedName.capitalized)
+            Spacer()
+            Text(object.formattedDate)
+            Spacer()
+            VStack {
+                Text(String(object.systolic))
+                Divider()
+                Text(String(object.diastolic))
+            }
+            .frame(maxWidth: 50)
         }
     }
     
-    
-    static func XXXListRowView(_ object: XXX) -> some View {
-        HStack {
-            Text(object.unwrappedName.capitalized)
-        }
-    }
+
     
     
     

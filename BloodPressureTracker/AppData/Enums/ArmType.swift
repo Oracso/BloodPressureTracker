@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+enum ArmType: String, CaseIterable, Identifiable {
+    case left, right
+    var id: Self { self }
+}

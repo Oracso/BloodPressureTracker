@@ -1,20 +1,18 @@
 //
-//  AddConfoundersView.swift
+//  TTTT.swift
 //  BloodPressureTracker
 //
-//  Created by Oscar Hardy on 06/02/2024.
+//  Created by Oscar Hardy on 09/03/2024.
 //
 
 import SwiftUI
 
-struct AddConfoundersView: View {
+struct TTTT: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    NavigationStack {
-        AddConfoundersView()
-    }
+    TTTT()
 }

@@ -110,3 +110,26 @@ extension CodingUserInfoKey {
        static let context = CodingUserInfoKey(rawValue: "context")
     }
 
+extension JSONManager {
+    
+    static func dictionaryToJsonString<T: Encodable, R: Encodable>(_ dictionary: [T:R]) -> String {
+        do {
+            let jsonData = try JSONEncoder().encode(dictionary)
+            return String(data: jsonData, encoding: .utf8)!
+        } catch {
+            print(error.localizedDescription)
+            return ""
+        }
+    }
+    
+    static func jsonStringToDictionary<T: Decodable, R: Decodable>(_ jsonString: String, _ tType: T.Type, _ rType: R.Type) -> [T : R] {
+        do {
+            let jsonData = jsonString.data(using: .utf8)
+            return try JSONDecoder().decode([T: R].self, from: jsonData!)
+        } catch {
+            print(error.localizedDescription)
+            return [:]
+        }
+    }
+    
+}

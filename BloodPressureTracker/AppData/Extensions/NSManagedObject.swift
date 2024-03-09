@@ -109,12 +109,7 @@ extension NSManagedObject {
         self as! Log
     }
     
-    func castedAsXXX() -> XXX {
-        self as! XXX
-    }
-    
-    
-    
+
     
 }
 

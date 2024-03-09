@@ -7,19 +7,117 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D3C5D9E32B70E7C0007963FA /* BloodPressureTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5D9E22B70E7C0007963FA /* BloodPressureTrackerApp.swift */; };
-		D3C5D9E52B70E7C0007963FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5D9E42B70E7C0007963FA /* ContentView.swift */; };
+		D32048182B7225710034BA4C /* BloodPressureTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047C12B7225710034BA4C /* BloodPressureTrackerApp.swift */; };
+		D320481A2B7225710034BA4C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047C42B7225710034BA4C /* Extensions.swift */; };
+		D320481C2B7225710034BA4C /* AppDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047C82B7225710034BA4C /* AppDataStore.swift */; };
+		D320481D2B7225710034BA4C /* AppObjectStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047C92B7225710034BA4C /* AppObjectStores.swift */; };
+		D320481E2B7225710034BA4C /* LogObjectStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047CB2B7225710034BA4C /* LogObjectStore.swift */; };
+		D32048272B7225710034BA4C /* EntityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047D62B7225710034BA4C /* EntityType.swift */; };
+		D32048282B7225710034BA4C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047D92B7225710034BA4C /* CoreDataManager.swift */; };
+		D32048292B7225710034BA4C /* CoreDataPreviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047DA2B7225710034BA4C /* CoreDataPreviewManager.swift */; };
+		D320482A2B7225710034BA4C /* CoreDataModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047DB2B7225710034BA4C /* CoreDataModifier.swift */; };
+		D320482B2B7225710034BA4C /* NSPersistentContainerSubClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047DC2B7225710034BA4C /* NSPersistentContainerSubClass.swift */; };
+		D320482C2B7225710034BA4C /* CoreDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047DD2B7225710034BA4C /* CoreDataFetcher.swift */; };
+		D320482D2B7225710034BA4C /* ChildContextObjectContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047DE2B7225710034BA4C /* ChildContextObjectContainer.swift */; };
+		D320482E2B7225710034BA4C /* BloodPressureTrackerModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D32047DF2B7225710034BA4C /* BloodPressureTrackerModel.xcdatamodeld */; };
+		D32048312B7225710034BA4C /* LogExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047E62B7225710034BA4C /* LogExtensions.swift */; };
+		D32048322B7225710034BA4C /* NSManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047E82B7225710034BA4C /* NSManagedObject.swift */; };
+		D32048362B7225710034BA4C /* ExampleDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047EE2B7225710034BA4C /* ExampleDataGenerator.swift */; };
+		D32048372B7225710034BA4C /* RandomisedObjectData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047EF2B7225710034BA4C /* RandomisedObjectData.swift */; };
+		D32048382B7225710034BA4C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047F22B7225710034BA4C /* SettingsView.swift */; };
+		D32048392B7225710034BA4C /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047F32B7225710034BA4C /* ActivityViewController.swift */; };
+		D320483A2B7225720034BA4C /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047F42B7225710034BA4C /* JSONManager.swift */; };
+		D320483B2B7225720034BA4C /* DataDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047F52B7225710034BA4C /* DataDownloadManager.swift */; };
+		D320483C2B7225720034BA4C /* DataDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047F62B7225710034BA4C /* DataDownloadView.swift */; };
+		D320483D2B7225720034BA4C /* AddObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047F92B7225710034BA4C /* AddObjectView.swift */; };
+		D320483E2B7225720034BA4C /* ViewEditingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32047FB2B7225710034BA4C /* ViewEditingManager.swift */; };
+		D32048422B7225720034BA4C /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32048012B7225710034BA4C /* ViewModifiers.swift */; };
+		D32048452B7225720034BA4C /* XDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32048062B7225710034BA4C /* XDetailView.swift */; };
+		D32048462B7225720034BA4C /* GenericViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32048072B7225710034BA4C /* GenericViewManager.swift */; };
+		D32048472B7225720034BA4C /* AllXView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32048082B7225710034BA4C /* AllXView.swift */; };
+		D32048482B7225720034BA4C /* AddLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320480B2B7225710034BA4C /* AddLogView.swift */; };
+		D32048492B7225720034BA4C /* LogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320480C2B7225710034BA4C /* LogDetailView.swift */; };
+		D320484C2B7225720034BA4C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32048102B7225710034BA4C /* TabBarView.swift */; };
+		D320484D2B7225720034BA4C /* NumberTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32048122B7225710034BA4C /* NumberTextFieldView.swift */; };
+		D320484E2B7225720034BA4C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32048132B7225710034BA4C /* CustomButton.swift */; };
+		D32048562B722AE50034BA4C /* ArmType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32048552B722AE50034BA4C /* ArmType.swift */; };
+		D32048582B722CA20034BA4C /* OptionalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32048572B722CA20034BA4C /* OptionalFunc.swift */; };
+		D320485A2B724B2B0034BA4C /* LogDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32048592B724B2B0034BA4C /* LogDataType.swift */; };
+		D320485C2B724BA30034BA4C /* LogDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320485B2B724BA30034BA4C /* LogDataManager.swift */; };
+		D32048602B724FFE0034BA4C /* Log+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320485E2B724FFE0034BA4C /* Log+CoreDataClass.swift */; };
+		D32048612B724FFE0034BA4C /* Log+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320485F2B724FFE0034BA4C /* Log+CoreDataProperties.swift */; };
+		D32048632B7254150034BA4C /* AddConfoundersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32048622B7254150034BA4C /* AddConfoundersView.swift */; };
+		D33328E32B74C49400E8F0E2 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328E22B74C49400E8F0E2 /* StatisticsView.swift */; };
+		D33328E62B74E86F00E8F0E2 /* LogAveragesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328E52B74E86F00E8F0E2 /* LogAveragesView.swift */; };
+		D33328EA2B74E94300E8F0E2 /* AveragesComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328E92B74E94300E8F0E2 /* AveragesComponentView.swift */; };
+		D33328ED2B74EBC900E8F0E2 /* StatisticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328EC2B74EBC900E8F0E2 /* StatisticsManager.swift */; };
+		D33328EF2B74EFFC00E8F0E2 /* StatisticsCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328EE2B74EFFC00E8F0E2 /* StatisticsCalculator.swift */; };
+		D33328F12B74F03C00E8F0E2 /* DifferenceRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328F02B74F03C00E8F0E2 /* DifferenceRecord.swift */; };
+		D362A6C32B9CF8A400A1E29B /* TTTT.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362A6C22B9CF8A400A1E29B /* TTTT.swift */; };
 		D3C5D9E72B70E7C1007963FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C5D9E62B70E7C1007963FA /* Assets.xcassets */; };
 		D3C5D9EB2B70E7C1007963FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C5D9EA2B70E7C1007963FA /* Preview Assets.xcassets */; };
+		D3F2D4A02B7279CC00E34784 /* ConfoundersSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2D49F2B7279CC00E34784 /* ConfoundersSectionView.swift */; };
+		D3F2D4A32B72895400E34784 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2D4A22B72895400E34784 /* SettingsManager.swift */; };
+		D3F2D4A52B72897B00E34784 /* ChartLineColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2D4A42B72897B00E34784 /* ChartLineColours.swift */; };
+		D3F2D4A72B737D2800E34784 /* ChartColoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F2D4A62B737D2800E34784 /* ChartColoursView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D32047C12B7225710034BA4C /* BloodPressureTrackerApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodPressureTrackerApp.swift; sourceTree = "<group>"; };
+		D32047C42B7225710034BA4C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D32047C82B7225710034BA4C /* AppDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataStore.swift; sourceTree = "<group>"; };
+		D32047C92B7225710034BA4C /* AppObjectStores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppObjectStores.swift; sourceTree = "<group>"; };
+		D32047CB2B7225710034BA4C /* LogObjectStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogObjectStore.swift; sourceTree = "<group>"; };
+		D32047D62B7225710034BA4C /* EntityType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityType.swift; sourceTree = "<group>"; };
+		D32047D92B7225710034BA4C /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D32047DA2B7225710034BA4C /* CoreDataPreviewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataPreviewManager.swift; sourceTree = "<group>"; };
+		D32047DB2B7225710034BA4C /* CoreDataModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataModifier.swift; sourceTree = "<group>"; };
+		D32047DC2B7225710034BA4C /* NSPersistentContainerSubClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPersistentContainerSubClass.swift; sourceTree = "<group>"; };
+		D32047DD2B7225710034BA4C /* CoreDataFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataFetcher.swift; sourceTree = "<group>"; };
+		D32047DE2B7225710034BA4C /* ChildContextObjectContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildContextObjectContainer.swift; sourceTree = "<group>"; };
+		D32047E02B7225710034BA4C /* dsds.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dsds.xcdatamodel; sourceTree = "<group>"; };
+		D32047E62B7225710034BA4C /* LogExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogExtensions.swift; sourceTree = "<group>"; };
+		D32047E82B7225710034BA4C /* NSManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSManagedObject.swift; sourceTree = "<group>"; };
+		D32047EE2B7225710034BA4C /* ExampleDataGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleDataGenerator.swift; sourceTree = "<group>"; };
+		D32047EF2B7225710034BA4C /* RandomisedObjectData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomisedObjectData.swift; sourceTree = "<group>"; };
+		D32047F22B7225710034BA4C /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D32047F32B7225710034BA4C /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		D32047F42B7225710034BA4C /* JSONManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
+		D32047F52B7225710034BA4C /* DataDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDownloadManager.swift; sourceTree = "<group>"; };
+		D32047F62B7225710034BA4C /* DataDownloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDownloadView.swift; sourceTree = "<group>"; };
+		D32047F92B7225710034BA4C /* AddObjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddObjectView.swift; sourceTree = "<group>"; };
+		D32047FB2B7225710034BA4C /* ViewEditingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewEditingManager.swift; sourceTree = "<group>"; };
+		D32048012B7225710034BA4C /* ViewModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
+		D32048062B7225710034BA4C /* XDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XDetailView.swift; sourceTree = "<group>"; };
+		D32048072B7225710034BA4C /* GenericViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericViewManager.swift; sourceTree = "<group>"; };
+		D32048082B7225710034BA4C /* AllXView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllXView.swift; sourceTree = "<group>"; };
+		D320480B2B7225710034BA4C /* AddLogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLogView.swift; sourceTree = "<group>"; };
+		D320480C2B7225710034BA4C /* LogDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailView.swift; sourceTree = "<group>"; };
+		D32048102B7225710034BA4C /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		D32048122B7225710034BA4C /* NumberTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberTextFieldView.swift; sourceTree = "<group>"; };
+		D32048132B7225710034BA4C /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		D32048552B722AE50034BA4C /* ArmType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmType.swift; sourceTree = "<group>"; };
+		D32048572B722CA20034BA4C /* OptionalFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalFunc.swift; sourceTree = "<group>"; };
+		D32048592B724B2B0034BA4C /* LogDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDataType.swift; sourceTree = "<group>"; };
+		D320485B2B724BA30034BA4C /* LogDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDataManager.swift; sourceTree = "<group>"; };
+		D320485E2B724FFE0034BA4C /* Log+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Log+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D320485F2B724FFE0034BA4C /* Log+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Log+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D32048622B7254150034BA4C /* AddConfoundersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConfoundersView.swift; sourceTree = "<group>"; };
+		D33328E22B74C49400E8F0E2 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		D33328E52B74E86F00E8F0E2 /* LogAveragesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAveragesView.swift; sourceTree = "<group>"; };
+		D33328E92B74E94300E8F0E2 /* AveragesComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AveragesComponentView.swift; sourceTree = "<group>"; };
+		D33328EC2B74EBC900E8F0E2 /* StatisticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsManager.swift; sourceTree = "<group>"; };
+		D33328EE2B74EFFC00E8F0E2 /* StatisticsCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCalculator.swift; sourceTree = "<group>"; };
+		D33328F02B74F03C00E8F0E2 /* DifferenceRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferenceRecord.swift; sourceTree = "<group>"; };
+		D362A6C22B9CF8A400A1E29B /* TTTT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTT.swift; sourceTree = "<group>"; };
 		D3C5D9DF2B70E7C0007963FA /* BloodPressureTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BloodPressureTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3C5D9E22B70E7C0007963FA /* BloodPressureTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureTrackerApp.swift; sourceTree = "<group>"; };
-		D3C5D9E42B70E7C0007963FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D3C5D9E62B70E7C1007963FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3C5D9E82B70E7C1007963FA /* BloodPressureTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BloodPressureTracker.entitlements; sourceTree = "<group>"; };
 		D3C5D9EA2B70E7C1007963FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D3F2D49F2B7279CC00E34784 /* ConfoundersSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfoundersSectionView.swift; sourceTree = "<group>"; };
+		D3F2D4A22B72895400E34784 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		D3F2D4A42B72897B00E34784 /* ChartLineColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartLineColours.swift; sourceTree = "<group>"; };
+		D3F2D4A62B737D2800E34784 /* ChartColoursView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartColoursView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +131,232 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D32047C22B7225710034BA4C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D32047C42B7225710034BA4C /* Extensions.swift */,
+				D32048572B722CA20034BA4C /* OptionalFunc.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D32047C62B7225710034BA4C /* AppData */ = {
+			isa = PBXGroup;
+			children = (
+				D32047D72B7225710034BA4C /* CoreData */,
+				D32047C72B7225710034BA4C /* DataStores */,
+				D32047D42B7225710034BA4C /* Enums */,
+				D32047E72B7225710034BA4C /* Extensions */,
+				D32047E92B7225710034BA4C /* Protocols */,
+				D32047ED2B7225710034BA4C /* DataGeneration */,
+			);
+			path = AppData;
+			sourceTree = "<group>";
+		};
+		D32047C72B7225710034BA4C /* DataStores */ = {
+			isa = PBXGroup;
+			children = (
+				D32047C82B7225710034BA4C /* AppDataStore.swift */,
+				D32047C92B7225710034BA4C /* AppObjectStores.swift */,
+				D32047CA2B7225710034BA4C /* ObjectStores */,
+			);
+			path = DataStores;
+			sourceTree = "<group>";
+		};
+		D32047CA2B7225710034BA4C /* ObjectStores */ = {
+			isa = PBXGroup;
+			children = (
+				D32047CB2B7225710034BA4C /* LogObjectStore.swift */,
+			);
+			path = ObjectStores;
+			sourceTree = "<group>";
+		};
+		D32047D42B7225710034BA4C /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				D32047D62B7225710034BA4C /* EntityType.swift */,
+				D32048592B724B2B0034BA4C /* LogDataType.swift */,
+				D32048552B722AE50034BA4C /* ArmType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		D32047D72B7225710034BA4C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D32047DF2B7225710034BA4C /* BloodPressureTrackerModel.xcdatamodeld */,
+				D32047D82B7225710034BA4C /* Managers */,
+				D32047E12B7225710034BA4C /* ManagedObjects */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		D32047D82B7225710034BA4C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D32047D92B7225710034BA4C /* CoreDataManager.swift */,
+				D32047DA2B7225710034BA4C /* CoreDataPreviewManager.swift */,
+				D32047DB2B7225710034BA4C /* CoreDataModifier.swift */,
+				D32047DC2B7225710034BA4C /* NSPersistentContainerSubClass.swift */,
+				D32047DD2B7225710034BA4C /* CoreDataFetcher.swift */,
+				D32047DE2B7225710034BA4C /* ChildContextObjectContainer.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D32047E12B7225710034BA4C /* ManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				D32047E22B7225710034BA4C /* Subclasses */,
+				D32047E42B7225710034BA4C /* EntityExtensions */,
+			);
+			path = ManagedObjects;
+			sourceTree = "<group>";
+		};
+		D32047E22B7225710034BA4C /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				D320485E2B724FFE0034BA4C /* Log+CoreDataClass.swift */,
+				D320485F2B724FFE0034BA4C /* Log+CoreDataProperties.swift */,
+			);
+			path = Subclasses;
+			sourceTree = "<group>";
+		};
+		D32047E42B7225710034BA4C /* EntityExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				D32047E62B7225710034BA4C /* LogExtensions.swift */,
+			);
+			path = EntityExtensions;
+			sourceTree = "<group>";
+		};
+		D32047E72B7225710034BA4C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D32047E82B7225710034BA4C /* NSManagedObject.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D32047E92B7225710034BA4C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D32047ED2B7225710034BA4C /* DataGeneration */ = {
+			isa = PBXGroup;
+			children = (
+				D32047EE2B7225710034BA4C /* ExampleDataGenerator.swift */,
+				D32047EF2B7225710034BA4C /* RandomisedObjectData.swift */,
+			);
+			path = DataGeneration;
+			sourceTree = "<group>";
+		};
+		D32047F12B7225710034BA4C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D32047F22B7225710034BA4C /* SettingsView.swift */,
+				D3F2D4A22B72895400E34784 /* SettingsManager.swift */,
+				D3F2D4A42B72897B00E34784 /* ChartLineColours.swift */,
+				D3F2D4A62B737D2800E34784 /* ChartColoursView.swift */,
+				D3F2D4A12B72892200E34784 /* DownloadData */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D32047F72B7225710034BA4C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D32048102B7225710034BA4C /* TabBarView.swift */,
+				D362A6C22B9CF8A400A1E29B /* TTTT.swift */,
+				D33328E42B74C49B00E8F0E2 /* Statistics */,
+				D32047F82B7225710034BA4C /* GenericViews */,
+				D32048092B7225710034BA4C /* EntityViews */,
+				D32048112B7225710034BA4C /* ViewComponents */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D32047F82B7225710034BA4C /* GenericViews */ = {
+			isa = PBXGroup;
+			children = (
+				D32047F92B7225710034BA4C /* AddObjectView.swift */,
+				D32047FA2B7225710034BA4C /* EditViews */,
+				D32048062B7225710034BA4C /* XDetailView.swift */,
+				D32048072B7225710034BA4C /* GenericViewManager.swift */,
+				D32048082B7225710034BA4C /* AllXView.swift */,
+			);
+			path = GenericViews;
+			sourceTree = "<group>";
+		};
+		D32047FA2B7225710034BA4C /* EditViews */ = {
+			isa = PBXGroup;
+			children = (
+				D32047FB2B7225710034BA4C /* ViewEditingManager.swift */,
+				D32048012B7225710034BA4C /* ViewModifiers.swift */,
+			);
+			path = EditViews;
+			sourceTree = "<group>";
+		};
+		D32048092B7225710034BA4C /* EntityViews */ = {
+			isa = PBXGroup;
+			children = (
+				D320480A2B7225710034BA4C /* Log */,
+			);
+			path = EntityViews;
+			sourceTree = "<group>";
+		};
+		D320480A2B7225710034BA4C /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				D320480B2B7225710034BA4C /* AddLogView.swift */,
+				D320480C2B7225710034BA4C /* LogDetailView.swift */,
+				D3F2D49F2B7279CC00E34784 /* ConfoundersSectionView.swift */,
+				D32048622B7254150034BA4C /* AddConfoundersView.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		D32048112B7225710034BA4C /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				D32048122B7225710034BA4C /* NumberTextFieldView.swift */,
+				D32048132B7225710034BA4C /* CustomButton.swift */,
+			);
+			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		D320485D2B724BAF0034BA4C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D320485B2B724BA30034BA4C /* LogDataManager.swift */,
+				D33328EC2B74EBC900E8F0E2 /* StatisticsManager.swift */,
+				D33328EE2B74EFFC00E8F0E2 /* StatisticsCalculator.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D33328E42B74C49B00E8F0E2 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				D33328E22B74C49400E8F0E2 /* StatisticsView.swift */,
+				D33328EB2B74EA9800E8F0E2 /* Averages */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		D33328EB2B74EA9800E8F0E2 /* Averages */ = {
+			isa = PBXGroup;
+			children = (
+				D33328E52B74E86F00E8F0E2 /* LogAveragesView.swift */,
+				D33328E92B74E94300E8F0E2 /* AveragesComponentView.swift */,
+				D33328F02B74F03C00E8F0E2 /* DifferenceRecord.swift */,
+			);
+			path = Averages;
+			sourceTree = "<group>";
+		};
 		D3C5D9D62B70E7C0007963FA = {
 			isa = PBXGroup;
 			children = (
@@ -52,8 +376,12 @@
 		D3C5D9E12B70E7C0007963FA /* BloodPressureTracker */ = {
 			isa = PBXGroup;
 			children = (
-				D3C5D9E22B70E7C0007963FA /* BloodPressureTrackerApp.swift */,
-				D3C5D9E42B70E7C0007963FA /* ContentView.swift */,
+				D32047C12B7225710034BA4C /* BloodPressureTrackerApp.swift */,
+				D32047F72B7225710034BA4C /* Views */,
+				D320485D2B724BAF0034BA4C /* Managers */,
+				D32047C62B7225710034BA4C /* AppData */,
+				D32047F12B7225710034BA4C /* Settings */,
+				D32047C22B7225710034BA4C /* Extensions */,
 				D3C5D9E62B70E7C1007963FA /* Assets.xcassets */,
 				D3C5D9E82B70E7C1007963FA /* BloodPressureTracker.entitlements */,
 				D3C5D9E92B70E7C1007963FA /* Preview Content */,
@@ -67,6 +395,17 @@
 				D3C5D9EA2B70E7C1007963FA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D3F2D4A12B72892200E34784 /* DownloadData */ = {
+			isa = PBXGroup;
+			children = (
+				D32047F32B7225710034BA4C /* ActivityViewController.swift */,
+				D32047F42B7225710034BA4C /* JSONManager.swift */,
+				D32047F52B7225710034BA4C /* DataDownloadManager.swift */,
+				D32047F62B7225710034BA4C /* DataDownloadView.swift */,
+			);
+			path = DownloadData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +478,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3C5D9E52B70E7C0007963FA /* ContentView.swift in Sources */,
-				D3C5D9E32B70E7C0007963FA /* BloodPressureTrackerApp.swift in Sources */,
+				D320483C2B7225720034BA4C /* DataDownloadView.swift in Sources */,
+				D320485C2B724BA30034BA4C /* LogDataManager.swift in Sources */,
+				D320482A2B7225710034BA4C /* CoreDataModifier.swift in Sources */,
+				D3F2D4A02B7279CC00E34784 /* ConfoundersSectionView.swift in Sources */,
+				D32048612B724FFE0034BA4C /* Log+CoreDataProperties.swift in Sources */,
+				D32048382B7225710034BA4C /* SettingsView.swift in Sources */,
+				D32048462B7225720034BA4C /* GenericViewManager.swift in Sources */,
+				D32048292B7225710034BA4C /* CoreDataPreviewManager.swift in Sources */,
+				D32048602B724FFE0034BA4C /* Log+CoreDataClass.swift in Sources */,
+				D320483E2B7225720034BA4C /* ViewEditingManager.swift in Sources */,
+				D32048452B7225720034BA4C /* XDetailView.swift in Sources */,
+				D320483D2B7225720034BA4C /* AddObjectView.swift in Sources */,
+				D320483A2B7225720034BA4C /* JSONManager.swift in Sources */,
+				D320482E2B7225710034BA4C /* BloodPressureTrackerModel.xcdatamodeld in Sources */,
+				D32048272B7225710034BA4C /* EntityType.swift in Sources */,
+				D362A6C32B9CF8A400A1E29B /* TTTT.swift in Sources */,
+				D32048582B722CA20034BA4C /* OptionalFunc.swift in Sources */,
+				D320481E2B7225710034BA4C /* LogObjectStore.swift in Sources */,
+				D32048362B7225710034BA4C /* ExampleDataGenerator.swift in Sources */,
+				D320483B2B7225720034BA4C /* DataDownloadManager.swift in Sources */,
+				D320484C2B7225720034BA4C /* TabBarView.swift in Sources */,
+				D320481A2B7225710034BA4C /* Extensions.swift in Sources */,
+				D3F2D4A52B72897B00E34784 /* ChartLineColours.swift in Sources */,
+				D32048472B7225720034BA4C /* AllXView.swift in Sources */,
+				D32048632B7254150034BA4C /* AddConfoundersView.swift in Sources */,
+				D32048372B7225710034BA4C /* RandomisedObjectData.swift in Sources */,
+				D32048492B7225720034BA4C /* LogDetailView.swift in Sources */,
+				D32048562B722AE50034BA4C /* ArmType.swift in Sources */,
+				D32048282B7225710034BA4C /* CoreDataManager.swift in Sources */,
+				D32048322B7225710034BA4C /* NSManagedObject.swift in Sources */,
+				D32048312B7225710034BA4C /* LogExtensions.swift in Sources */,
+				D320481C2B7225710034BA4C /* AppDataStore.swift in Sources */,
+				D33328E32B74C49400E8F0E2 /* StatisticsView.swift in Sources */,
+				D33328EF2B74EFFC00E8F0E2 /* StatisticsCalculator.swift in Sources */,
+				D32048422B7225720034BA4C /* ViewModifiers.swift in Sources */,
+				D320482C2B7225710034BA4C /* CoreDataFetcher.swift in Sources */,
+				D33328EA2B74E94300E8F0E2 /* AveragesComponentView.swift in Sources */,
+				D320481D2B7225710034BA4C /* AppObjectStores.swift in Sources */,
+				D320485A2B724B2B0034BA4C /* LogDataType.swift in Sources */,
+				D320482B2B7225710034BA4C /* NSPersistentContainerSubClass.swift in Sources */,
+				D320484D2B7225720034BA4C /* NumberTextFieldView.swift in Sources */,
+				D3F2D4A72B737D2800E34784 /* ChartColoursView.swift in Sources */,
+				D33328ED2B74EBC900E8F0E2 /* StatisticsManager.swift in Sources */,
+				D33328E62B74E86F00E8F0E2 /* LogAveragesView.swift in Sources */,
+				D320482D2B7225710034BA4C /* ChildContextObjectContainer.swift in Sources */,
+				D32048182B7225710034BA4C /* BloodPressureTrackerApp.swift in Sources */,
+				D33328F12B74F03C00E8F0E2 /* DifferenceRecord.swift in Sources */,
+				D3F2D4A32B72895400E34784 /* SettingsManager.swift in Sources */,
+				D32048392B7225710034BA4C /* ActivityViewController.swift in Sources */,
+				D320484E2B7225720034BA4C /* CustomButton.swift in Sources */,
+				D32048482B7225720034BA4C /* AddLogView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +747,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D32047DF2B7225710034BA4C /* BloodPressureTrackerModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D32047E02B7225710034BA4C /* dsds.xcdatamodel */,
+			);
+			currentVersion = D32047E02B7225710034BA4C /* dsds.xcdatamodel */;
+			path = BloodPressureTrackerModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D3C5D9D72B70E7C0007963FA /* Project object */;
 }

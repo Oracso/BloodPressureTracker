@@ -18,9 +18,9 @@ struct TabBarView: View {
                     Label("Logs", systemImage: "bookmark")
                 }
             
-            AllXView(ads.allObjects(.XXX), .XXX)
+            StatisticsView()
                 .tabItem {
-                    Label("XXX", systemImage: "book")
+                    Label("Statistics", systemImage: "book")
                 }
             
              

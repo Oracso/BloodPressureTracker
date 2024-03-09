@@ -36,6 +36,19 @@ extension Binding {
     }
 }
 
+extension Binding where Value == Int64 {
+    func toStringBinding() -> Binding<String> {
+        Binding<String>(
+            get: { String(self.wrappedValue) },
+            set: { newValue in
+                if let intValue = Int64(newValue) {
+                    self.wrappedValue = intValue
+                }
+            }
+        )
+    }
+}
+
 
 extension Date {
 
@@ -57,10 +70,6 @@ extension Date {
 }
 
 
-extension URL {
-    static let example = URL(string: "ExampleURL")
-    
-}
 
 
 public extension UIApplication {
@@ -78,42 +87,37 @@ public extension UIApplication {
 
 
 
-
-// TODO: How to add this and make it work?
-//UINavigationController NavigationStack
-//extension NavigationStack {
-//    public func settingsToolbar(_ self: Self) -> some View {
-//        self.toolbar {
-//            
-//            ToolbarItem(placement: .navigationBarTrailing) {
-//                NavigationLink {
-//                    SettingsView()
-//                } label: {
-//                    Image(systemName: "person.circle")
-//                }
-//            }
-//            
-//        }
-//    }
-//}
-
-
-extension String {
-    func insertSpacesBeforeUppercaseLetters() -> String {
-        let pattern = "(?<=\\p{Ll})(?=\\p{Lu})"
-        let regex = try! NSRegularExpression(pattern: pattern, options: [])
-        let range = NSRange(location: 0, length: self.utf16.count)
+extension Double {
+    func roundToIntOrDouble() -> String {
         
-        let modifiedString = regex.stringByReplacingMatches(
-            in: self,
-            options: [],
-            range: range,
-            withTemplate: " "
-        )
+        func intOrDouble(_ answer: Double) -> IntOrDouble {
+            if answer.truncatingRemainder(dividingBy: 1) == 0 {
+                return .int(Int(answer))
+            } else {
+                return .double(answer)
+            }
+        }
         
-        return modifiedString
+        enum IntOrDouble {
+            case int(Int)
+            case double(Double)
+        }
+        
+        var answer: String {
+            let ans = intOrDouble(self)
+            switch ans {
+            case .int(let int):
+                return String(int)
+            case .double(let double):
+                let formatter = NumberFormatter()
+                formatter.numberStyle = .decimal
+                formatter.minimumFractionDigits = 0
+                formatter.maximumFractionDigits = 2
+                return formatter.string(from: NSNumber(value: double)) ?? "-666"
+            }
+        }
+        
+        return answer
+        
     }
 }
-
-
-

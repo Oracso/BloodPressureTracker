@@ -8,20 +8,6 @@
 import SwiftUI
 import CoreData
 
-// Process
-
-// Objects -> JSON
-
-//  - The CoreData objects need to be parsed into JSON
-//  - The JSON string needs to be saved to a file somewhere in the app directory (I'm not sure if this is saved unless specified?)
-//  - The file is then accessed and saved to the User's personal documents
-
-// JSON -> Objects
-
-// - The JSON file is then accessed via its URL
-// - URL is used to create the CoreData objects
-
-
 struct DataDownloadView: View {
     
     @Environment(\.managedObjectContext) var moc
@@ -47,22 +33,13 @@ struct DataDownloadView: View {
                 switch entity.entity {
                 case .log:
                     let castedObjects = objects as! [Log]
-                    dDManager.writeObjectsAndAddURLToArray(castedObjects)
-                case .XXX:
-                    let castedObjects = objects as! [XXX]
-                    dDManager.writeObjectsAndAddURLToArray(castedObjects)
+//                    dDManager.writeObjectsAndAddURLToArray(castedObjects)
                 }
                 
             }
         }
         
    
-        
-        
-        // MARK: - Random Function ...? (Useful)
-        func inOutType(type: Any.Type) -> Any.Type {
-            return type
-        }
         
         
     }

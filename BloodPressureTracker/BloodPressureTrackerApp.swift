@@ -10,19 +10,18 @@ import SwiftUI
 @main
 struct BloodPressureTrackerApp: App {
 
-
-    init() {
-        let defaults = UserDefaults.standard
-        if defaults.bool(forKey: "hasLaunched") == true {
-            print("Not first launch")
-            // Code
-        } else {
-            // MARK: - First Launch Code
-            print("First Launch")
-            defaults.set(true, forKey: "hasLaunched")
-//            let _ = CoreDataPreviewManager(CoreDataManager.shared.container.viewContext)
-        }
-    }
+//    init() {
+//        let defaults = UserDefaults.standard
+//        if defaults.bool(forKey: "hasLaunched") == true {
+//            print("Not first launch")
+//            // Code
+//        } else {
+//            // MARK: - First Launch Code
+//            print("First Launch")
+//            defaults.set(true, forKey: "hasLaunched")
+////            let _ = CoreDataPreviewManager(CoreDataManager.shared.container.viewContext)
+//        }
+//    }
     
     let coreDataManager = CoreDataManager.shared
     
@@ -31,10 +30,11 @@ struct BloodPressureTrackerApp: App {
     @StateObject var appDataStore = AppDataStore(CoreDataManager.shared.container.viewContext)
 
     @StateObject var viewEditingManager = ViewEditingManager(CoreDataManager.shared.container.viewContext)
+    
+    @StateObject var settingsManager = SettingsManager()
 
     let previewManager = CoreDataPreviewManager(CoreDataManager.shared.container.viewContext)
 
-    @StateObject var database = Database()
     
     var body: some Scene {
         WindowGroup {
@@ -44,18 +44,16 @@ struct BloodPressureTrackerApp: App {
                 .environment(\.managedObjectContext, CoreDataManager.shared.container.viewContext)
             
                 .environmentObject(appDataStore)
-
+            
                 .environmentObject(viewEditingManager)
             
-                .environmentObject(database)
+                .environmentObject(settingsManager)
             
         }
 
         .onChange(of: scenePhase) { phase, _ in
             switch phase {
             case .background:
-                print("Unsure whether or how to save here yet")
-                // actually, do we want CoreData to save just bc we dip out?
                 print("background")
             case .inactive:
                 print("scene phase -> inactive")

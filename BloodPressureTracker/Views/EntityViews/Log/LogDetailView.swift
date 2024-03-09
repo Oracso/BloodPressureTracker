@@ -13,9 +13,11 @@ struct LogDetailView: View {
         self.log = log
     }
     
+    @Environment(\.dismiss) private var dismiss
+    
     @ObservedObject var log: Log
     
-//    @EnvironmentObject var vem: ViewEditingManager
+    @EnvironmentObject var vem: ViewEditingManager
     
     
     var body: some View {
@@ -29,47 +31,12 @@ struct LogDetailView: View {
             Text("Arm: \(log.unwrappedArm)")
             Text("Date: \(log.formattedDate)")
 
-//            if vem.editMode == .inactive {
-//                Text(log.unwrappedName.capitalized)
-//            } else {
-//                TextField("New Name", text: $log.name.defaultValue(""))
-//            }
             
+            ConfoundersSectionView(confoundersString: $log.confounders)
+
+
+            GenericDeleteObjectButton(log, dismiss)
             
-
-            // if vem.editMode == .inactive {
-            //     Text(log.unwrapped<#property#>.capitalized)
-            // } else {
-            //     TextField("New <#property#>", text: $log.<#property#>.defaultValue("Optional Fail"))
-            // }
-
-
-            // Section("XXX") {
-            //     if vem.editMode == .inactive {
-            //             if let XXX = log.XXX {
-            //                 NavigationLink {
-            //                     XXXDetailView(XXX)
-            //                 } label: {
-            //                     GenericViewManager.XXXListRowView(XXX)
-            //                 }
-            //                 .disabled(vem.isEditing)
-            //             } else {
-            //                 Button("Choose XXX") { vem.activeEditMode() }
-            //             }
-            //         } else {
-            //             ToOnePickerParentView(objectSelection: $log.XXX, entityType: .XXX, context: vem.context)
-            //         }
-            // }
-
-
-
-
-
-            
-
-            
-                
-
             
         }
         

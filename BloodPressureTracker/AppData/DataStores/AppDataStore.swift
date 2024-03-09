@@ -54,25 +54,6 @@ extension AppDataStore {
 
 
 
-// MARK: - CustomUUID Functionality
-
-extension AppDataStore {
-    
-    func returnObjectFromAllCustomUUIDs(_ customUUID: String) -> NSManagedObject? {
-        objects.returnObjectFromAllCustomUUIDs(customUUID)
-    }
-    
-    func returnObjectsFromAllCustomUUIDs(_ customUUIDs: [String]) -> [NSManagedObject] {
-        var array: [NSManagedObject] = []
-        for customUUID in customUUIDs {
-            if let object = returnObjectFromAllCustomUUIDs(customUUID) {
-                array.append(object)
-            }
-        }
-        return array
-    }
-    
-}
 
 
 // MARK: - Check Object Can Save 
@@ -83,19 +64,14 @@ extension AppDataStore {
         switch entityType {
         case .log:
             checkCanSaveLog(object.castedAsLog())
-        case .XXX:
-            checkCanSaveXXX(object.castedAsXXX())
         }
         
     }
     
     private func checkCanSaveLog(_ object: Log) -> Bool {
-        objects.logOS.logs.contains(where: { $0.<#property#>.lowercased() == object.<#property#>.lowercased() })
+        objects.logOS.logs.contains(where: { $0.date == object.date })
     }
     
-    private func checkCanSaveXXX(_ object: XXX) -> Bool {
-        objects.XXXOS.XXX.contains(where: { $0.<#property#>.lowercased() == object.<#property#>.lowercased() })
-    }
     
     
 }
