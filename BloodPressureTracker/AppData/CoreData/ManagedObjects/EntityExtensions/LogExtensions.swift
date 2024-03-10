@@ -32,6 +32,10 @@ extension Log {
     //      <#attribute#>.unwrap(<#Entity#>.self)
     // }
         
+    public var unwrappedDate: Date {
+        date ?? .now
+    }
+    
     public var formattedDate: String {
         DateFormatter.localizedString(from: date ?? .now, dateStyle: .medium, timeStyle: .short)
     }

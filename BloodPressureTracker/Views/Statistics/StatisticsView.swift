@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct StatisticsView: View {
+    @EnvironmentObject var ads: AppDataStore
     @StateObject var statisticsManager = StatisticsManager()
     var body: some View {
         NavigationStack {
@@ -23,7 +24,7 @@ struct StatisticsView: View {
                 Section("Chart:") {
                     
                     
-                    StatisticsChartParentView()
+//                    StatisticsChartParentView(allLogs: ads.objects.logOS.logs)
                     
                     
                     

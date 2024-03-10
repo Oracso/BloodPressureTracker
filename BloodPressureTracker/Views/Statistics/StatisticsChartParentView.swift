@@ -9,21 +9,27 @@ import SwiftUI
 
 struct StatisticsChartParentView: View {
     
-    @State private var dataTypeSelection: DataTypeSelection = .all
+    init(allLogs: [Log]) {
+        _logStatsManager = StateObject(wrappedValue: LogStatsManager(allLogs: allLogs))
+    }
     
+    @StateObject var logStatsManager: LogStatsManager
     
-    enum DataTypeSelection: String, Identifiable, CaseIterable {
-        case all, systolic, diastolic, pulse
-        var id: Self { self }
+    @State private var chartData: ChartData = ChartData(series: [])
+    
+    let chartDataManager = ChartDataManager()
+    
+    func createChartData() {
+        chartData = chartDataManager.createChartData(logStatsManager.filteredLogs, dataTypeSelection: logStatsManager.dataTypeSelection)
     }
     
     var body: some View {
         
         
         VStack {
-            LineChartView(chartData: .example)
-            Picker("Data Tye Selection", selection: $dataTypeSelection) {
-                ForEach(DataTypeSelection.allCases) { dataType in
+            LineChartView(dataTypeSelection: $logStatsManager.dataTypeSelection, chartData: chartData)
+            Picker("Data Tye Selection", selection: $logStatsManager.dataTypeSelection) {
+                ForEach(LogDataSelectionType.allCases) { dataType in
                     Text(dataType.rawValue.capitalized)
                         .tag(dataType.rawValue)
                 }
@@ -32,6 +38,23 @@ struct StatisticsChartParentView: View {
         }
         
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        
+        
+        
+            .onAppear() {
+                createChartData()
+            }
+        
+            .onChange(of: logStatsManager.filteredLogs) {
+                createChartData()
+            }
+        
+            .onChange(of: logStatsManager.dataTypeSelection) {
+                createChartData()
+            }
+        
+        
     }
 }
 
@@ -39,7 +62,8 @@ struct StatisticsChartParentView: View {
     NavigationStack {
         List {
             Section("Charts:") {
-                StatisticsChartParentView()
+                StatisticsChartParentView(allLogs: AppDataStore(CoreDataPreviewManager.previewManager.context).objects.logOS.logs)
+                    .environmentObject(SettingsManager())
             }
         }
     }

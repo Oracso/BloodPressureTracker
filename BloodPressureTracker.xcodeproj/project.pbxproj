@@ -53,6 +53,9 @@
 		D33328ED2B74EBC900E8F0E2 /* StatisticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328EC2B74EBC900E8F0E2 /* StatisticsManager.swift */; };
 		D33328EF2B74EFFC00E8F0E2 /* StatisticsCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328EE2B74EFFC00E8F0E2 /* StatisticsCalculator.swift */; };
 		D33328F12B74F03C00E8F0E2 /* DifferenceRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328F02B74F03C00E8F0E2 /* DifferenceRecord.swift */; };
+		D348AB662B9DAFB3001DD836 /* LogStatsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D348AB652B9DAFB3001DD836 /* LogStatsManager.swift */; };
+		D348AB682B9DB095001DD836 /* LogDataSelectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D348AB672B9DB095001DD836 /* LogDataSelectionType.swift */; };
+		D348AB6A2B9DB5AF001DD836 /* ChartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D348AB692B9DB5AF001DD836 /* ChartDataManager.swift */; };
 		D362A6C52B9CFF0E00A1E29B /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362A6C42B9CFF0E00A1E29B /* LineChartView.swift */; };
 		D362A6C82B9CFF2E00A1E29B /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362A6C72B9CFF2E00A1E29B /* ChartData.swift */; };
 		D362A6CB2B9D003F00A1E29B /* DataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362A6CA2B9D003F00A1E29B /* DataPoint.swift */; };
@@ -112,6 +115,9 @@
 		D33328EC2B74EBC900E8F0E2 /* StatisticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsManager.swift; sourceTree = "<group>"; };
 		D33328EE2B74EFFC00E8F0E2 /* StatisticsCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCalculator.swift; sourceTree = "<group>"; };
 		D33328F02B74F03C00E8F0E2 /* DifferenceRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferenceRecord.swift; sourceTree = "<group>"; };
+		D348AB652B9DAFB3001DD836 /* LogStatsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogStatsManager.swift; sourceTree = "<group>"; };
+		D348AB672B9DB095001DD836 /* LogDataSelectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDataSelectionType.swift; sourceTree = "<group>"; };
+		D348AB692B9DB5AF001DD836 /* ChartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDataManager.swift; sourceTree = "<group>"; };
 		D362A6C42B9CFF0E00A1E29B /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		D362A6C72B9CFF2E00A1E29B /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		D362A6CA2B9D003F00A1E29B /* DataPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPoint.swift; sourceTree = "<group>"; };
@@ -182,6 +188,7 @@
 			children = (
 				D32047D62B7225710034BA4C /* EntityType.swift */,
 				D32048592B724B2B0034BA4C /* LogDataType.swift */,
+				D348AB672B9DB095001DD836 /* LogDataSelectionType.swift */,
 				D32048552B722AE50034BA4C /* ArmType.swift */,
 			);
 			path = Enums;
@@ -338,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				D320485B2B724BA30034BA4C /* LogDataManager.swift */,
+				D348AB652B9DAFB3001DD836 /* LogStatsManager.swift */,
 				D33328EC2B74EBC900E8F0E2 /* StatisticsManager.swift */,
 				D33328EE2B74EFFC00E8F0E2 /* StatisticsCalculator.swift */,
 			);
@@ -368,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				D362A6C42B9CFF0E00A1E29B /* LineChartView.swift */,
+				D348AB692B9DB5AF001DD836 /* ChartDataManager.swift */,
 				D362A6CC2B9D004900A1E29B /* Structs */,
 			);
 			path = Charts;
@@ -504,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D320483C2B7225720034BA4C /* DataDownloadView.swift in Sources */,
+				D348AB682B9DB095001DD836 /* LogDataSelectionType.swift in Sources */,
 				D320485C2B724BA30034BA4C /* LogDataManager.swift in Sources */,
 				D320482A2B7225710034BA4C /* CoreDataModifier.swift in Sources */,
 				D3F2D4A02B7279CC00E34784 /* ConfoundersSectionView.swift in Sources */,
@@ -522,6 +532,7 @@
 				D32048582B722CA20034BA4C /* OptionalFunc.swift in Sources */,
 				D320481E2B7225710034BA4C /* LogObjectStore.swift in Sources */,
 				D32048362B7225710034BA4C /* ExampleDataGenerator.swift in Sources */,
+				D348AB6A2B9DB5AF001DD836 /* ChartDataManager.swift in Sources */,
 				D320483B2B7225720034BA4C /* DataDownloadManager.swift in Sources */,
 				D320484C2B7225720034BA4C /* TabBarView.swift in Sources */,
 				D320481A2B7225710034BA4C /* Extensions.swift in Sources */,
@@ -552,6 +563,7 @@
 				D320482D2B7225710034BA4C /* ChildContextObjectContainer.swift in Sources */,
 				D32048182B7225710034BA4C /* BloodPressureTrackerApp.swift in Sources */,
 				D33328F12B74F03C00E8F0E2 /* DifferenceRecord.swift in Sources */,
+				D348AB662B9DAFB3001DD836 /* LogStatsManager.swift in Sources */,
 				D3F2D4A32B72895400E34784 /* SettingsManager.swift in Sources */,
 				D362A6CE2B9D08E300A1E29B /* StatisticsChartParentView.swift in Sources */,
 				D32048392B7225710034BA4C /* ActivityViewController.swift in Sources */,

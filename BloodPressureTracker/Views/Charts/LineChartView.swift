@@ -10,21 +10,84 @@ import Charts
 
 struct LineChartView: View {
     
+    @EnvironmentObject var settingsManager: SettingsManager
+    
+    @Binding var dataTypeSelection: LogDataSelectionType
+    
     let chartData: ChartData
     
     var body: some View {
-        Chart(chartData.dataPoints) {
-            LineMark(
-                x: .value("Date", $0.date, unit: .hour),
-                y: .value("Value", $0.value)
-            )
-            .foregroundStyle(by: .value("Data Type", $0.dataType.rawValue))
+        Chart() {
+           
+            switch dataTypeSelection {
+            case .all:
+                ForEach(chartData.series[0].dataPoints) {
+                    LineMark(
+                        x: .value("Date", $0.date, unit: .hour),
+                        y: .value("Value", $0.value),
+                        series: .value("Diastolic", "A")
+                    )
+                }
+                .foregroundStyle(settingsManager.chartLineColours.systolic)
+                .symbol(.circle)
+
+                
+                ForEach(chartData.series[1].dataPoints) {
+                    LineMark(
+                        x: .value("Date", $0.date, unit: .hour),
+                        y: .value("Value", $0.value),
+                        series: .value("Systolic", "B")
+                    )
+                }
+                .foregroundStyle(settingsManager.chartLineColours.diastolic)
+                .symbol(.triangle)
+                
+                ForEach(chartData.series[2].dataPoints) {
+                    LineMark(
+                        x: .value("Date", $0.date, unit: .hour),
+                        y: .value("Value", $0.value),
+                        series: .value("Pulse", "C")
+                    )
+                }
+                .foregroundStyle(settingsManager.chartLineColours.pulse)
+                .symbol(.cross)
+            case .systolic:
+                ForEach(chartData.series[0].dataPoints) {
+                    LineMark(
+                        x: .value("Date", $0.date, unit: .hour),
+                        y: .value("Value", $0.value),
+                        series: .value("Diastolic", "A")
+                    )
+                }
+                .foregroundStyle(settingsManager.chartLineColours.systolic)
+                .symbol(.circle)
+            case .diastolic:
+                ForEach(chartData.series[0].dataPoints) {
+                    LineMark(
+                        x: .value("Date", $0.date, unit: .hour),
+                        y: .value("Value", $0.value),
+                        series: .value("Systolic", "B")
+                    )
+                }
+                .foregroundStyle(settingsManager.chartLineColours.diastolic)
+                .symbol(.triangle)
+            case .pulse:
+                ForEach(chartData.series[0].dataPoints) {
+                    LineMark(
+                        x: .value("Date", $0.date, unit: .hour),
+                        y: .value("Value", $0.value),
+                        series: .value("Pulse", "C")
+                    )
+                }
+                .foregroundStyle(settingsManager.chartLineColours.pulse)
+                .symbol(.cross)
+            }
             
-            .symbol(by: .value("value", $0.dataType.rawValue))
-            
-//            .foregroundStyle(setLineColour(chartData))
             
 //            .foregroundStyle(by: .value("Data Type", $0.dataType.rawValue))
+            
+//            .symbol(by: .value("value", $0.dataType.rawValue))
+            
             
         }
         
@@ -58,5 +121,6 @@ struct LineChartView: View {
 }
 
 #Preview {
-    LineChartView(chartData: .example)
+    LineChartView(dataTypeSelection: .createBinding(.all), chartData: .example)
+        .environmentObject(SettingsManager())
 }
