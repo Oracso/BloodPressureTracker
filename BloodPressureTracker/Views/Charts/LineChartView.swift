@@ -21,28 +21,28 @@ struct LineChartView: View {
            
             switch dataTypeSelection {
             case .all:
-                ForEach(chartData.series[0].dataPoints) {
+                ForEach(chartData.series.first(where: {$0.name == "systolic"})?.dataPoints ?? []) {
                     LineMark(
                         x: .value("Date", $0.date, unit: .hour),
                         y: .value("Value", $0.value),
-                        series: .value("Diastolic", "A")
+                        series: .value("Systolic", "A")
                     )
                 }
                 .foregroundStyle(settingsManager.chartLineColours.systolic)
                 .symbol(.circle)
 
                 
-                ForEach(chartData.series[1].dataPoints) {
+                ForEach(chartData.series.first(where: {$0.name == "diastolic"})?.dataPoints ?? []) {
                     LineMark(
                         x: .value("Date", $0.date, unit: .hour),
                         y: .value("Value", $0.value),
-                        series: .value("Systolic", "B")
+                        series: .value("Diastolic", "B")
                     )
                 }
                 .foregroundStyle(settingsManager.chartLineColours.diastolic)
                 .symbol(.triangle)
                 
-                ForEach(chartData.series[2].dataPoints) {
+                ForEach(chartData.series.first(where: {$0.name == "pulse"})?.dataPoints ?? []) {
                     LineMark(
                         x: .value("Date", $0.date, unit: .hour),
                         y: .value("Value", $0.value),
@@ -52,7 +52,7 @@ struct LineChartView: View {
                 .foregroundStyle(settingsManager.chartLineColours.pulse)
                 .symbol(.cross)
             case .systolic:
-                ForEach(chartData.series[0].dataPoints) {
+                ForEach(chartData.series.first(where: {$0.name == "systolic"})?.dataPoints ?? []) {
                     LineMark(
                         x: .value("Date", $0.date, unit: .hour),
                         y: .value("Value", $0.value),
@@ -62,7 +62,7 @@ struct LineChartView: View {
                 .foregroundStyle(settingsManager.chartLineColours.systolic)
                 .symbol(.circle)
             case .diastolic:
-                ForEach(chartData.series[0].dataPoints) {
+                ForEach(chartData.series.first(where: {$0.name == "diastolic"})?.dataPoints ?? []) {
                     LineMark(
                         x: .value("Date", $0.date, unit: .hour),
                         y: .value("Value", $0.value),
@@ -72,7 +72,7 @@ struct LineChartView: View {
                 .foregroundStyle(settingsManager.chartLineColours.diastolic)
                 .symbol(.triangle)
             case .pulse:
-                ForEach(chartData.series[0].dataPoints) {
+                ForEach(chartData.series.first(where: {$0.name == "pulse"})?.dataPoints ?? []) {
                     LineMark(
                         x: .value("Date", $0.date, unit: .hour),
                         y: .value("Value", $0.value),
@@ -82,11 +82,6 @@ struct LineChartView: View {
                 .foregroundStyle(settingsManager.chartLineColours.pulse)
                 .symbol(.cross)
             }
-            
-            
-//            .foregroundStyle(by: .value("Data Type", $0.dataType.rawValue))
-            
-//            .symbol(by: .value("value", $0.dataType.rawValue))
             
             
         }
@@ -103,7 +98,7 @@ struct LineChartView: View {
         }
         
         // Y Axis
-        .chartYAxisLabel("mmHg")
+        .chartYAxisLabel(dataTypeSelection == .pulse ? "BPM" : "mmHg")
         .chartYAxis {
             AxisMarks(position: .leading)
         }

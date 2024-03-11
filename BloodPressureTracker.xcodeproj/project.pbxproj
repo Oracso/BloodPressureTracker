@@ -53,6 +53,8 @@
 		D33328ED2B74EBC900E8F0E2 /* StatisticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328EC2B74EBC900E8F0E2 /* StatisticsManager.swift */; };
 		D33328EF2B74EFFC00E8F0E2 /* StatisticsCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328EE2B74EFFC00E8F0E2 /* StatisticsCalculator.swift */; };
 		D33328F12B74F03C00E8F0E2 /* DifferenceRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328F02B74F03C00E8F0E2 /* DifferenceRecord.swift */; };
+		D343B29C2B9F282B00A43BDD /* ChartDateFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343B29B2B9F282B00A43BDD /* ChartDateFilterView.swift */; };
+		D343B29E2B9F288B00A43BDD /* DateFilterPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343B29D2B9F288B00A43BDD /* DateFilterPeriod.swift */; };
 		D348AB662B9DAFB3001DD836 /* LogStatsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D348AB652B9DAFB3001DD836 /* LogStatsManager.swift */; };
 		D348AB682B9DB095001DD836 /* LogDataSelectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D348AB672B9DB095001DD836 /* LogDataSelectionType.swift */; };
 		D348AB6A2B9DB5AF001DD836 /* ChartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D348AB692B9DB5AF001DD836 /* ChartDataManager.swift */; };
@@ -115,6 +117,8 @@
 		D33328EC2B74EBC900E8F0E2 /* StatisticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsManager.swift; sourceTree = "<group>"; };
 		D33328EE2B74EFFC00E8F0E2 /* StatisticsCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCalculator.swift; sourceTree = "<group>"; };
 		D33328F02B74F03C00E8F0E2 /* DifferenceRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferenceRecord.swift; sourceTree = "<group>"; };
+		D343B29B2B9F282B00A43BDD /* ChartDateFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDateFilterView.swift; sourceTree = "<group>"; };
+		D343B29D2B9F288B00A43BDD /* DateFilterPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFilterPeriod.swift; sourceTree = "<group>"; };
 		D348AB652B9DAFB3001DD836 /* LogStatsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogStatsManager.swift; sourceTree = "<group>"; };
 		D348AB672B9DB095001DD836 /* LogDataSelectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDataSelectionType.swift; sourceTree = "<group>"; };
 		D348AB692B9DB5AF001DD836 /* ChartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDataManager.swift; sourceTree = "<group>"; };
@@ -376,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				D362A6C42B9CFF0E00A1E29B /* LineChartView.swift */,
+				D343B29B2B9F282B00A43BDD /* ChartDateFilterView.swift */,
 				D348AB692B9DB5AF001DD836 /* ChartDataManager.swift */,
 				D362A6CC2B9D004900A1E29B /* Structs */,
 			);
@@ -387,6 +392,7 @@
 			children = (
 				D362A6C72B9CFF2E00A1E29B /* ChartData.swift */,
 				D362A6CA2B9D003F00A1E29B /* DataPoint.swift */,
+				D343B29D2B9F288B00A43BDD /* DateFilterPeriod.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -525,6 +531,7 @@
 				D32048602B724FFE0034BA4C /* Log+CoreDataClass.swift in Sources */,
 				D320483E2B7225720034BA4C /* ViewEditingManager.swift in Sources */,
 				D32048452B7225720034BA4C /* XDetailView.swift in Sources */,
+				D343B29E2B9F288B00A43BDD /* DateFilterPeriod.swift in Sources */,
 				D320483D2B7225720034BA4C /* AddObjectView.swift in Sources */,
 				D320483A2B7225720034BA4C /* JSONManager.swift in Sources */,
 				D320482E2B7225710034BA4C /* BloodPressureTrackerModel.xcdatamodeld in Sources */,
@@ -567,6 +574,7 @@
 				D3F2D4A32B72895400E34784 /* SettingsManager.swift in Sources */,
 				D362A6CE2B9D08E300A1E29B /* StatisticsChartParentView.swift in Sources */,
 				D32048392B7225710034BA4C /* ActivityViewController.swift in Sources */,
+				D343B29C2B9F282B00A43BDD /* ChartDateFilterView.swift in Sources */,
 				D320484E2B7225720034BA4C /* CustomButton.swift in Sources */,
 				D32048482B7225720034BA4C /* AddLogView.swift in Sources */,
 			);

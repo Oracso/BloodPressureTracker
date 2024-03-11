@@ -27,7 +27,11 @@ struct StatisticsChartParentView: View {
         
         
         VStack {
+            
+            ChartDateFilterView(logStatsManager: logStatsManager)
+            
             LineChartView(dataTypeSelection: $logStatsManager.dataTypeSelection, chartData: chartData)
+                .frame(minHeight: 200)
             Picker("Data Tye Selection", selection: $logStatsManager.dataTypeSelection) {
                 ForEach(LogDataSelectionType.allCases) { dataType in
                     Text(dataType.rawValue.capitalized)

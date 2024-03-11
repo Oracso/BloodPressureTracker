@@ -15,15 +15,16 @@ struct ChartData {
 
 extension ChartData {
     static let example = ChartData(series: [
-        ChartSeries(dataPoints: DataPoint.examplesDiastolic),
-        ChartSeries(dataPoints: DataPoint.examplesSystolic),
-        ChartSeries(dataPoints: DataPoint.examplesPulse)
+        ChartSeries(name: "diastolic", dataPoints: DataPoint.examplesDiastolic),
+        ChartSeries(name: "systolic", dataPoints: DataPoint.examplesSystolic),
+        ChartSeries(name: "pulse", dataPoints: DataPoint.examplesPulse)
     ])
 }
 
 
 
 struct ChartSeries {
+    let name: String
     let dataPoints: [DataPoint]
 }
 

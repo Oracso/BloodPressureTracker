@@ -24,7 +24,7 @@ struct StatisticsView: View {
                 Section("Chart:") {
                     
                     
-//                    StatisticsChartParentView(allLogs: ads.objects.logOS.logs)
+                    StatisticsChartParentView(allLogs: ads.objects.logOS.logs)
                     
                     
                     
@@ -43,7 +43,7 @@ struct StatisticsView: View {
                         // need to pass in already filtered dates????
                         ScrollView {
                             //                        LineGraphParentView(allLogs: $logDataObject.logArray, filterTypes: [.date, .dataType])
-                            //                            .frame(minHeight: 600)
+                            //
                         }
                         
                     } label: {
@@ -75,4 +75,5 @@ struct StatisticsView: View {
     StatisticsView()
         .environmentObject(AppDataStore(CoreDataPreviewManager.previewManager.context))
         .environmentObject(StatisticsManager())
+        .environmentObject(SettingsManager())
 }

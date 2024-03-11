@@ -14,6 +14,7 @@ class LogStatsManager: ObservableObject {
     }
     
     
+    
     let allLogs: [Log]
     
     @Published var filteredLogs: [Log] = []
@@ -21,6 +22,23 @@ class LogStatsManager: ObservableObject {
     @Published var dataTypeSelection: LogDataSelectionType = .all
     
     
+    
+    
+    // MARK: - Date Filter
+    
+    @Published var datePeriod: DateFilterPeriod = .week
+    
+    @Published var fromDate: Date = .daysDif(-7)
+    @Published var toDate: Date = .now
+    
+    
+    
+    
+    let logDataManager = LogDataManager()
+    
+    func filterLogsByDate() {
+        filteredLogs = logDataManager.filterByDate(allLogs, fromDate: fromDate, toDate: toDate)
+    }
     
     
     

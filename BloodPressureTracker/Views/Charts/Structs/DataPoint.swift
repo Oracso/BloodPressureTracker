@@ -10,7 +10,8 @@ import Foundation
 struct DataPoint: Identifiable {
     let date: Date
     let value: Int
-    let dataType: LogDataType
+    // TODO: For Delete --- 
+    var dataType: LogDataType?
     var id: Date { date }
 }
 
