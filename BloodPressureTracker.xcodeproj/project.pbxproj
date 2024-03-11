@@ -55,6 +55,9 @@
 		D33328F12B74F03C00E8F0E2 /* DifferenceRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328F02B74F03C00E8F0E2 /* DifferenceRecord.swift */; };
 		D343B29C2B9F282B00A43BDD /* ChartDateFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343B29B2B9F282B00A43BDD /* ChartDateFilterView.swift */; };
 		D343B29E2B9F288B00A43BDD /* DateFilterPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343B29D2B9F288B00A43BDD /* DateFilterPeriod.swift */; };
+		D343B2A12B9F426B00A43BDD /* ChartSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343B2A02B9F426B00A43BDD /* ChartSeries.swift */; };
+		D343B2A32B9F478A00A43BDD /* StatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343B2A22B9F478A00A43BDD /* StatCard.swift */; };
+		D343B2A52B9F496F00A43BDD /* StatCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343B2A42B9F496F00A43BDD /* StatCardView.swift */; };
 		D348AB662B9DAFB3001DD836 /* LogStatsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D348AB652B9DAFB3001DD836 /* LogStatsManager.swift */; };
 		D348AB682B9DB095001DD836 /* LogDataSelectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D348AB672B9DB095001DD836 /* LogDataSelectionType.swift */; };
 		D348AB6A2B9DB5AF001DD836 /* ChartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D348AB692B9DB5AF001DD836 /* ChartDataManager.swift */; };
@@ -119,6 +122,9 @@
 		D33328F02B74F03C00E8F0E2 /* DifferenceRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferenceRecord.swift; sourceTree = "<group>"; };
 		D343B29B2B9F282B00A43BDD /* ChartDateFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDateFilterView.swift; sourceTree = "<group>"; };
 		D343B29D2B9F288B00A43BDD /* DateFilterPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFilterPeriod.swift; sourceTree = "<group>"; };
+		D343B2A02B9F426B00A43BDD /* ChartSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSeries.swift; sourceTree = "<group>"; };
+		D343B2A22B9F478A00A43BDD /* StatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCard.swift; sourceTree = "<group>"; };
+		D343B2A42B9F496F00A43BDD /* StatCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCardView.swift; sourceTree = "<group>"; };
 		D348AB652B9DAFB3001DD836 /* LogStatsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogStatsManager.swift; sourceTree = "<group>"; };
 		D348AB672B9DB095001DD836 /* LogDataSelectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDataSelectionType.swift; sourceTree = "<group>"; };
 		D348AB692B9DB5AF001DD836 /* ChartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDataManager.swift; sourceTree = "<group>"; };
@@ -361,6 +367,8 @@
 			children = (
 				D33328E22B74C49400E8F0E2 /* StatisticsView.swift */,
 				D362A6CD2B9D08E300A1E29B /* StatisticsChartParentView.swift */,
+				D343B2A22B9F478A00A43BDD /* StatCard.swift */,
+				D343B2A42B9F496F00A43BDD /* StatCardView.swift */,
 				D33328EB2B74EA9800E8F0E2 /* Averages */,
 			);
 			path = Statistics;
@@ -376,12 +384,21 @@
 			path = Averages;
 			sourceTree = "<group>";
 		};
+		D343B29F2B9F424A00A43BDD /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				D343B29D2B9F288B00A43BDD /* DateFilterPeriod.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		D362A6C62B9CFF1700A1E29B /* Charts */ = {
 			isa = PBXGroup;
 			children = (
 				D362A6C42B9CFF0E00A1E29B /* LineChartView.swift */,
 				D343B29B2B9F282B00A43BDD /* ChartDateFilterView.swift */,
 				D348AB692B9DB5AF001DD836 /* ChartDataManager.swift */,
+				D343B29F2B9F424A00A43BDD /* Enums */,
 				D362A6CC2B9D004900A1E29B /* Structs */,
 			);
 			path = Charts;
@@ -391,8 +408,8 @@
 			isa = PBXGroup;
 			children = (
 				D362A6C72B9CFF2E00A1E29B /* ChartData.swift */,
+				D343B2A02B9F426B00A43BDD /* ChartSeries.swift */,
 				D362A6CA2B9D003F00A1E29B /* DataPoint.swift */,
-				D343B29D2B9F288B00A43BDD /* DateFilterPeriod.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -518,6 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D343B2A52B9F496F00A43BDD /* StatCardView.swift in Sources */,
 				D320483C2B7225720034BA4C /* DataDownloadView.swift in Sources */,
 				D348AB682B9DB095001DD836 /* LogDataSelectionType.swift in Sources */,
 				D320485C2B724BA30034BA4C /* LogDataManager.swift in Sources */,
@@ -545,6 +563,7 @@
 				D320481A2B7225710034BA4C /* Extensions.swift in Sources */,
 				D3F2D4A52B72897B00E34784 /* ChartLineColours.swift in Sources */,
 				D32048472B7225720034BA4C /* AllXView.swift in Sources */,
+				D343B2A32B9F478A00A43BDD /* StatCard.swift in Sources */,
 				D32048632B7254150034BA4C /* AddConfoundersView.swift in Sources */,
 				D32048372B7225710034BA4C /* RandomisedObjectData.swift in Sources */,
 				D32048492B7225720034BA4C /* LogDetailView.swift in Sources */,
@@ -575,6 +594,7 @@
 				D362A6CE2B9D08E300A1E29B /* StatisticsChartParentView.swift in Sources */,
 				D32048392B7225710034BA4C /* ActivityViewController.swift in Sources */,
 				D343B29C2B9F282B00A43BDD /* ChartDateFilterView.swift in Sources */,
+				D343B2A12B9F426B00A43BDD /* ChartSeries.swift in Sources */,
 				D320484E2B7225720034BA4C /* CustomButton.swift in Sources */,
 				D32048482B7225720034BA4C /* AddLogView.swift in Sources */,
 			);

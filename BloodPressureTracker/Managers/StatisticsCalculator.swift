@@ -13,9 +13,9 @@ struct StatisticsCalculator {
     // load logs into it to remove need to input into function
 //    let allLogs: [TestLog]
     
-    private func returnValueArray(_ allLogs: [Log], dataType: LogDataType) -> [Int] {
+    private func returnValueArray(_ logs: [Log], dataType: LogDataType) -> [Int] {
         var array: [Int] = []
-        for log in allLogs {
+        for log in logs {
             switch dataType {
             case .systolic:
                 array.append(log.systolicInt)
@@ -68,13 +68,13 @@ struct StatisticsCalculator {
 //        }
 //    }
     
-    func totalEntries(_ allLogs: [Log]) -> Int {
-        return allLogs.count
+    func totalEntries(_ logs: [Log]) -> Int {
+        return logs.count
     }
     
-    func totalLeft(_ allLogs: [Log]) -> Int {
+    func totalLeft(_ logs: [Log]) -> Int {
         var count = 0
-        for log in allLogs {
+        for log in logs {
             if log.arm == "left" {
                 count += 1
             }
@@ -82,9 +82,9 @@ struct StatisticsCalculator {
         return count
     }
     
-    func totalRight(_ allLogs: [Log]) -> Int {
+    func totalRight(_ logs: [Log]) -> Int {
         var count = 0
-        for log in allLogs {
+        for log in logs {
             if log.arm == "right" {
                 count += 1
             }
@@ -92,8 +92,8 @@ struct StatisticsCalculator {
         return count
     }
     
-    func lowestHighestValue(_ allLogs: [Log], dataType: LogDataType) -> (lowest: Int, highest: Int) {
-        let array = returnValueArray(allLogs, dataType: dataType)
+    func lowestHighestValue(_ logs: [Log], dataType: LogDataType) -> (lowest: Int, highest: Int) {
+        let array = returnValueArray(logs, dataType: dataType)
         let min = array.min() ?? 0
         let max = array.max() ?? 0
         return (lowest: min, highest: max)
@@ -101,20 +101,20 @@ struct StatisticsCalculator {
     
     
     
-    func biggestChange(_ allLogs: [Log], dataType: LogDataType) -> [DifferenceRecord] {
+    func biggestChange(_ logs: [Log], dataType: LogDataType) -> [DifferenceRecord] {
         // can change this to array if ===
         var differences: [DifferenceRecord] = []
         
         // is there a better way to make range
-        for i in 0...allLogs.count - 1 {
+        for i in 0...logs.count - 1 {
             var diff = 0
             switch dataType {
             case .systolic:
-                diff = allLogs[i].systolicInt - allLogs[i + 1].systolicInt
+                diff = logs[i].systolicInt - logs[i + 1].systolicInt
             case .diastolic:
-                diff = allLogs[i].systolicInt - allLogs[i + 1].systolicInt
+                diff = logs[i].systolicInt - logs[i + 1].systolicInt
             case .pulse:
-                diff = allLogs[i].systolicInt - allLogs[i + 1].systolicInt
+                diff = logs[i].systolicInt - logs[i + 1].systolicInt
             }
             // TODO: These are all the same.. should they be?
             
@@ -124,7 +124,7 @@ struct StatisticsCalculator {
             
             for difference in differences {
                 if diff > difference.difference {
-                    let newDifference = DifferenceRecord(fromDate: allLogs[i].date ?? .now, toDate: allLogs[i+1].date ?? .now, difference: diff)
+                    let newDifference = DifferenceRecord(fromDate: logs[i].date ?? .now, toDate: logs[i+1].date ?? .now, difference: diff)
                     differences.append(newDifference)
                 }
             }

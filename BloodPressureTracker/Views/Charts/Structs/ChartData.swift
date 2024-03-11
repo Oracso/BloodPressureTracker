@@ -9,7 +9,6 @@ import Foundation
 
 struct ChartData {
     var series: [ChartSeries]
-    //    let dataPoints: [DataPoint]
 }
 
 
@@ -23,8 +22,4 @@ extension ChartData {
 
 
 
-struct ChartSeries {
-    let name: String
-    let dataPoints: [DataPoint]
-}
 

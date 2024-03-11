@@ -8,8 +8,6 @@
 import Foundation
 
 enum DateFilterPeriod: String, Identifiable, CaseIterable {
-    case week
-//    case biweek
-    case month, quarter, year, custom
+    case week, month, quarter, year, custom
     var id: Self { self }
 }

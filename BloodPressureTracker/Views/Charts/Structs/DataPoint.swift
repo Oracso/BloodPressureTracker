@@ -10,39 +10,37 @@ import Foundation
 struct DataPoint: Identifiable {
     let date: Date
     let value: Int
-    // TODO: For Delete --- 
-    var dataType: LogDataType?
     var id: Date { date }
 }
 
 
 extension DataPoint {
     static let examplesDiastolic = [
-        DataPoint(date: .now, value: 0, dataType: .diastolic),
-        DataPoint(date: .daysDif(1), value: 1, dataType: .diastolic),
-        DataPoint(date: .daysDif(2), value: 2, dataType: .diastolic),
-        DataPoint(date: .daysDif(3), value: 3, dataType: .diastolic),
-        DataPoint(date: .daysDif(4), value: 4, dataType: .diastolic)
+        DataPoint(date: .now, value: 0),
+        DataPoint(date: .daysDif(1), value: 1),
+        DataPoint(date: .daysDif(2), value: 2),
+        DataPoint(date: .daysDif(3), value: 3),
+        DataPoint(date: .daysDif(4), value: 4)
     ]
 }
 
 extension DataPoint {
     static let examplesSystolic = [
-        DataPoint(date: .now, value: 10, dataType: .systolic),
-        DataPoint(date: .daysDif(1), value: 11, dataType: .systolic),
-        DataPoint(date: .daysDif(2), value: 12, dataType: .systolic),
-        DataPoint(date: .daysDif(3), value: 13, dataType: .systolic),
-        DataPoint(date: .daysDif(4), value: 14, dataType: .systolic)
+        DataPoint(date: .now, value: 10),
+        DataPoint(date: .daysDif(1), value: 11),
+        DataPoint(date: .daysDif(2), value: 12),
+        DataPoint(date: .daysDif(3), value: 13),
+        DataPoint(date: .daysDif(4), value: 14)
     ]
 }
 
 extension DataPoint {
     static let examplesPulse = [
-        DataPoint(date: .now, value: 5, dataType: .pulse),
-        DataPoint(date: .daysDif(1), value: 6, dataType: .pulse),
-        DataPoint(date: .daysDif(2), value: 7, dataType: .pulse),
-        DataPoint(date: .daysDif(3), value: 8, dataType: .pulse),
-        DataPoint(date: .daysDif(4), value: 9, dataType: .pulse)
+        DataPoint(date: .now, value: 5),
+        DataPoint(date: .daysDif(1), value: 6),
+        DataPoint(date: .daysDif(2), value: 7),
+        DataPoint(date: .daysDif(3), value: 8),
+        DataPoint(date: .daysDif(4), value: 9)
     ]
 }
 

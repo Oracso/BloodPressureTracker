@@ -15,6 +15,8 @@ struct StatisticsChartParentView: View {
     
     @StateObject var logStatsManager: LogStatsManager
     
+    @StateObject var statCard = StatCard()
+    
     @State private var chartData: ChartData = ChartData(series: [])
     
     let chartDataManager = ChartDataManager()
@@ -23,6 +25,7 @@ struct StatisticsChartParentView: View {
         chartData = chartDataManager.createChartData(logStatsManager.filteredLogs, dataTypeSelection: logStatsManager.dataTypeSelection)
     }
     
+        
     var body: some View {
         
         
@@ -41,7 +44,8 @@ struct StatisticsChartParentView: View {
                 .pickerStyle(.segmented)
         }
         
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        StatCardView(statCard: statCard)
         
         
         
@@ -50,13 +54,22 @@ struct StatisticsChartParentView: View {
                 createChartData()
             }
         
+            .onAppear() {
+                statCard.calculateStats(logStatsManager.filteredLogs)
+            }
+        
             .onChange(of: logStatsManager.filteredLogs) {
                 createChartData()
+                //
+                statCard.calculateStats(logStatsManager.filteredLogs)
             }
         
             .onChange(of: logStatsManager.dataTypeSelection) {
                 createChartData()
             }
+        
+            
+            
         
         
     }
