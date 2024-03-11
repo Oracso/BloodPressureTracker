@@ -37,7 +37,18 @@ class LogStatsManager: ObservableObject {
     let logDataManager = LogDataManager()
     
     func filterLogsByDate() {
-        filteredLogs = logDataManager.filterByDate(allLogs, fromDate: fromDate, toDate: toDate)
+        switch datePeriod {
+        case .week:
+            filteredLogs = logDataManager.filterByDate(allLogs, fromDate: .daysDif(-7), toDate: .now)
+        case .month:
+            filteredLogs = logDataManager.filterByDate(allLogs, fromDate: .daysDif(-28), toDate: .now)
+        case .quarter:
+            filteredLogs = logDataManager.filterByDate(allLogs, fromDate: .daysDif(-84), toDate: .now)
+        case .year:
+            filteredLogs = logDataManager.filterByDate(allLogs, fromDate: .yearsDif(-1), toDate: .now)
+        case .custom:
+            filteredLogs = logDataManager.filterByDate(allLogs, fromDate: fromDate, toDate: toDate)
+        }
     }
     
     

@@ -33,7 +33,7 @@ struct ChartDateFilterView: View {
         
         
         .onChange(of: logStatsManager.datePeriod) {
-            
+            logStatsManager.filterLogsByDate()
         }
         
         .onChange(of: logStatsManager.fromDate) {

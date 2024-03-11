@@ -92,6 +92,12 @@ struct LineChartView: View {
         .chartXAxisLabel(alignment: .center) {
             Text("Date")
         }
+        
+//        .chartXAxis {
+//            AxisMarks(preset: .aligned)
+//        }
+//        .chartXScale(domain: 0...60)
+        
         .chartYAxis {
             AxisMarks(position: .trailing)
 //            AxisMarks(values: [0, 5, 10, 15])

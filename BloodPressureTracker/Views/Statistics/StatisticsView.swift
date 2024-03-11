@@ -23,44 +23,12 @@ struct StatisticsView: View {
                 
                 Section("Chart:") {
                     
-                    
                     StatisticsChartParentView(allLogs: ads.objects.logOS.logs)
                     
                     
-                    
-                    
-                    
                 }
                 
-                
-                
-                
-                Section("Charts:") {
-                    
-                    //                LineGraphParentView(allLogs: $logDataObject.logArray, filterTypes: [.date])
-                    //                    .frame(minHeight: 400)
-                    NavigationLink {
-                        // need to pass in already filtered dates????
-                        ScrollView {
-                            //                        LineGraphParentView(allLogs: $logDataObject.logArray, filterTypes: [.date, .dataType])
-                            //
-                        }
-                        
-                    } label: {
-                        Text("Filter Data Type")
-                    }
-                    
-                    
-                }
-                
-                
-                Section("Stats:") {
-                    NavigationLink {
-                        //                    CustomStatView(allLogs: logDataObject.logArray)
-                    } label: {
-                        Text("Custom Stats")
-                    }
-                }
+       
                 
             }
             
