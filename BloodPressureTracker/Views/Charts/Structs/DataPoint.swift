@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DataPoint: Identifiable {
+struct DataPoint: Identifiable, Hashable {
     let date: Date
     let value: Int
     var id: Date { date }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChartSeries {
+struct ChartSeries: Hashable {
     let name: String
     let dataPoints: [DataPoint]
 }

@@ -58,6 +58,7 @@
 		D343B2A12B9F426B00A43BDD /* ChartSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343B2A02B9F426B00A43BDD /* ChartSeries.swift */; };
 		D343B2A32B9F478A00A43BDD /* StatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343B2A22B9F478A00A43BDD /* StatCard.swift */; };
 		D343B2A52B9F496F00A43BDD /* StatCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343B2A42B9F496F00A43BDD /* StatCardView.swift */; };
+		D343B2A72BA0571600A43BDD /* LineChartLegend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343B2A62BA0571600A43BDD /* LineChartLegend.swift */; };
 		D348AB662B9DAFB3001DD836 /* LogStatsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D348AB652B9DAFB3001DD836 /* LogStatsManager.swift */; };
 		D348AB682B9DB095001DD836 /* LogDataSelectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D348AB672B9DB095001DD836 /* LogDataSelectionType.swift */; };
 		D348AB6A2B9DB5AF001DD836 /* ChartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D348AB692B9DB5AF001DD836 /* ChartDataManager.swift */; };
@@ -125,6 +126,7 @@
 		D343B2A02B9F426B00A43BDD /* ChartSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSeries.swift; sourceTree = "<group>"; };
 		D343B2A22B9F478A00A43BDD /* StatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCard.swift; sourceTree = "<group>"; };
 		D343B2A42B9F496F00A43BDD /* StatCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCardView.swift; sourceTree = "<group>"; };
+		D343B2A62BA0571600A43BDD /* LineChartLegend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartLegend.swift; sourceTree = "<group>"; };
 		D348AB652B9DAFB3001DD836 /* LogStatsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogStatsManager.swift; sourceTree = "<group>"; };
 		D348AB672B9DB095001DD836 /* LogDataSelectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDataSelectionType.swift; sourceTree = "<group>"; };
 		D348AB692B9DB5AF001DD836 /* ChartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDataManager.swift; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				D362A6C42B9CFF0E00A1E29B /* LineChartView.swift */,
+				D343B2A62BA0571600A43BDD /* LineChartLegend.swift */,
 				D343B29B2B9F282B00A43BDD /* ChartDateFilterView.swift */,
 				D348AB692B9DB5AF001DD836 /* ChartDataManager.swift */,
 				D343B29F2B9F424A00A43BDD /* Enums */,
@@ -537,6 +540,7 @@
 			files = (
 				D343B2A52B9F496F00A43BDD /* StatCardView.swift in Sources */,
 				D320483C2B7225720034BA4C /* DataDownloadView.swift in Sources */,
+				D343B2A72BA0571600A43BDD /* LineChartLegend.swift in Sources */,
 				D348AB682B9DB095001DD836 /* LogDataSelectionType.swift in Sources */,
 				D320485C2B724BA30034BA4C /* LogDataManager.swift in Sources */,
 				D320482A2B7225710034BA4C /* CoreDataModifier.swift in Sources */,
