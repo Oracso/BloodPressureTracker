@@ -9,28 +9,63 @@ import SwiftUI
 
 struct ChartColoursView: View {
     @EnvironmentObject var settingsManager: SettingsManager
+    @State private var showButtons: Bool = false
+    @State private var reset: Bool = false
     var body: some View {
         List {
             
-            ColorPicker("All", selection: $settingsManager.chartLineColours.all, supportsOpacity: false)
-            ColorPicker("Systolic", selection: $settingsManager.chartLineColours.systolic, supportsOpacity: false)
-            ColorPicker("Diastolic", selection: $settingsManager.chartLineColours.diastolic, supportsOpacity: false)
-            ColorPicker("Pulse", selection: $settingsManager.chartLineColours.pulse, supportsOpacity: false)
-            
-            
-            Button("Save Colours") {
-                settingsManager.chartLineColours.saveColours()
+            Section("Colours") {
+                ColorPicker("Systolic", selection: $settingsManager.chartLineColours.systolic, supportsOpacity: false)
+                ColorPicker("Diastolic", selection: $settingsManager.chartLineColours.diastolic, supportsOpacity: false)
+                ColorPicker("Pulse", selection: $settingsManager.chartLineColours.pulse, supportsOpacity: false)
             }
             
-            Button("Reset Colours") {
-                settingsManager.loadChartLineColours()
+            Section("Preview") {
+                LineChartView(dataTypeSelection: .createBinding(.all), chartData: .example, fromDate: .createBinding(.daysDif(-4)), toDate: .createBinding(.now))
             }
             
-            // TODO: Example Line Chart With Dumby Data
+            
+            
+            if showButtons {
+                Section {
+                    Button("Save Colours") {
+                        showButtons = false
+                        settingsManager.chartLineColours.saveColours()
+                    }
+                }
+                
+                
+                Button("Reset Colours") {
+                    settingsManager.loadChartLineColours()
+                    reset = true
+                }
+            }
+            
+            
             
         }
         
         .navigationTitle("Chart Colours")
+        
+        
+        .onChange(of: settingsManager.chartLineColours.systolic) {
+            showButtons = true
+        }
+        
+        .onChange(of: settingsManager.chartLineColours.diastolic) {
+            showButtons = true
+        }
+        
+        .onChange(of: settingsManager.chartLineColours.pulse) {
+            showButtons = true
+        }
+        
+        .onChange(of: reset) {
+            reset = false
+            showButtons = false
+        }
+        
+        
     }
 }
 

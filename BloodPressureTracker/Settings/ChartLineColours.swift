@@ -9,17 +9,15 @@ import Foundation
 import SwiftUI
 
 struct ChartLineColours {
-    init(all: Color = .yellow, systolic: Color = .green, diastolic: Color = .orange, pulse: Color = .indigo) {
-        self.all = all
+    init(systolic: Color = .green, diastolic: Color = .orange, pulse: Color = .indigo) {
         self.systolic = systolic
         self.diastolic = diastolic
         self.pulse = pulse
     }
     
-    var all: Color = .cyan
     var systolic: Color = .green
     var diastolic: Color = .orange
-    var pulse: Color
+    var pulse: Color = .cyan
 }
 
 extension ChartLineColours {
@@ -34,7 +32,6 @@ extension SettingsManager {
         } else {
             let string = defaults.value(forKey: ChartLineColours.userDefaultsKey) as? String ?? ""
             let coloursDic = JSONManager.jsonStringToDictionary(string, String.self, String.self)
-            chartLineColours.all = ChartLineColours.colourFromString(coloursDic["all"] ?? "")
             chartLineColours.systolic = ChartLineColours.colourFromString(coloursDic["systolic"] ?? "")
             chartLineColours.diastolic = ChartLineColours.colourFromString(coloursDic["diastolic"] ?? "")
             chartLineColours.pulse = ChartLineColours.colourFromString(coloursDic["pulse"] ?? "")
@@ -44,28 +41,24 @@ extension SettingsManager {
 
 extension ChartLineColours {
     func saveColours() {
-        let dic = ChartLineColours.allColoursComponents([all, systolic, diastolic, pulse])
+        let dic = ChartLineColours.allColoursComponents([diastolic, pulse, systolic])
         let string = JSONManager.dictionaryToJsonString(dic)
         UserDefaults.standard.setValue(string, forKey: ChartLineColours.userDefaultsKey)
     }
 }
 
 extension ChartLineColours {
-    // TODO: Just use array instead ?
     static let defaultColorStrings = [
-        "all":ChartLineColours.colourComponents(.cyan),
-        "systolic":ChartLineColours.colourComponents(.green),
         "diastolic":ChartLineColours.colourComponents(.orange),
-        "pulse": ChartLineColours.colourComponents(.indigo)
+        "pulse": ChartLineColours.colourComponents(.indigo),
+        "systolic":ChartLineColours.colourComponents(.green),
     ]
 }
-
 
 extension ChartLineColours {
     static func allColoursComponents(_ colours: [Color]) -> [String: String] {
         var dic = [String: String]()
-        let colourPropertyNames: [String] = defaultColorStrings.keys.map({ string in String(string)})
-        print(colourPropertyNames)
+        let colourPropertyNames: [String] = defaultColorStrings.keys.map({ string in String(string)}).sorted(by: <)
         var count = 0
         for colour in colours {
             dic[colourPropertyNames[count]] = colourComponents(colour)
@@ -92,28 +85,3 @@ extension ChartLineColours {
     }
 }
 
-//func setDataTypeColour(_ filterType: LogDataType) -> Color {
-//    switch filterType {
-//    case .systolic:
-//        return lineColourSchemes.systolic
-//    case .diastolic:
-//        return lineColourSchemes.diastolic
-//    case .pulse:
-//        return lineColourSchemes.pulse
-//    }
-//}
-//
-//
-//
-//func setLineColour(_ filterType: DataTypeFilterTypes) -> Color {
-//    switch filterType {
-//    case .allFilter:
-//        return lineColourSchemes.all
-//    case .systolicFilter:
-//        return lineColourSchemes.systolic
-//    case .diastolicFilter:
-//        return lineColourSchemes.diastolic
-//    case .pulseFilter:
-//        return lineColourSchemes.pulse
-//    }
-//}
