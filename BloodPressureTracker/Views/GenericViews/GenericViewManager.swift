@@ -25,9 +25,6 @@ struct GenericViewManager {
             nilDetailView()
         }
     }
-
-
-
     
 
     // MARK: - View Navigation Titles

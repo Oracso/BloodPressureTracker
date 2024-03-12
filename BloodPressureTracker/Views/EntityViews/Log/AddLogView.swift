@@ -16,8 +16,6 @@ struct AddLogView: View {
     @ObservedObject var log: Log
     
     @EnvironmentObject var vem: ViewEditingManager
-
-    @State private var newArm: String = "right"
     
     var body: some View {
         

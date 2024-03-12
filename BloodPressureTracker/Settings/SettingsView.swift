@@ -9,18 +9,16 @@ import SwiftUI
 
 struct SettingsView: View {
     
-//    @EnvironmentObject var settingsManager: SettingsManager
-    
     var body: some View {
         
         List {
             
-            NavigationLink("Download Data") {
-                DataDownloadView()
-            }
-            
             NavigationLink("Chart Colours") {
                 ChartColoursView()
+            }
+            
+            NavigationLink("Download Data") {
+                DataDownloadView()
             }
             
             
@@ -28,7 +26,6 @@ struct SettingsView: View {
         
         .navigationTitle("Settings")
       
-//        .environmentObject(settingsManager)
         
     }
 }
