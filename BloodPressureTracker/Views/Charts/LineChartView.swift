@@ -16,6 +16,9 @@ struct LineChartView: View {
     
     let chartData: ChartData
     
+    @Binding var fromDate: Date
+    @Binding var toDate: Date
+    
     var body: some View {
         ZStack {
             Chart() {
@@ -97,6 +100,7 @@ struct LineChartView: View {
                 Text("Date")
             }
             
+            .chartXScale(domain: fromDate...toDate)
             
             // Y Axis
             .chartYAxisLabel(dataTypeSelection == .pulse ? "BPM" : "mmHg")
@@ -137,7 +141,7 @@ struct LineChartView: View {
     }
 }
 
-#Preview {
-    LineChartView(dataTypeSelection: .createBinding(.all), chartData: .example)
-        .environmentObject(SettingsManager())
-}
+//#Preview {
+//    LineChartView(dataTypeSelection: .createBinding(.all), chartData: .example)
+//        .environmentObject(SettingsManager())
+//}

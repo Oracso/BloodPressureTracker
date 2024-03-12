@@ -33,7 +33,7 @@ struct StatisticsChartParentView: View {
             
             ChartDateFilterView(logStatsManager: logStatsManager)
             
-            LineChartView(dataTypeSelection: $logStatsManager.dataTypeSelection, chartData: chartData)
+            LineChartView(dataTypeSelection: $logStatsManager.dataTypeSelection, chartData: chartData, fromDate: $logStatsManager.fromDate, toDate: $logStatsManager.toDate)
                 .frame(minHeight: 200)
             Picker("Data Tye Selection", selection: $logStatsManager.dataTypeSelection) {
                 ForEach(LogDataSelectionType.allCases) { dataType in
