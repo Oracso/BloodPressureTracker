@@ -91,16 +91,12 @@ extension GenericViewManager {
     
     static func logListRowView(_ object: Log) -> some View {
         HStack {
+            Text(object.listDate)
             Spacer()
-            Text(object.formattedDate)
-            Spacer()
-            VStack {
-                Text(String(object.systolic))
-                Divider()
-                Text(String(object.diastolic))
-            }
-            .frame(maxWidth: 50)
+            BloodPressureReadingView(systolic: Double(object.systolicInt), diastolic: Double(object.diastolicInt), pulse: Double(object.pulseInt))
+                .fixedSize()
         }
+        .padding(.horizontal)
     }
     
 

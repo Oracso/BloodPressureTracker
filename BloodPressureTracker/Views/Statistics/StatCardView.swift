@@ -11,33 +11,53 @@ struct StatCardView: View {
     @ObservedObject var statCard: StatCard
     var body: some View {
         
-        Text("Average Systolic: \(String(format: "%.2f", statCard.averageSystolic))")
-        Text("Average Diastolic: \(String(format: "%.2f", statCard.averageDiastolic))")
-        Text("Average Pulse: \(String(format: "%.2f", statCard.averagePulse))")
-        
-        VStack {
-            Text("Systolic")
-            HStack {
-                Text("Lowest: \(statCard.lowestSystolic)")
-                Text("Highest: \(statCard.highestSystolic)")
-            }
+        HStack {
+            Spacer()
+            Text("Average:")
+            BloodPressureReadingView(systolic: statCard.averageSystolic, diastolic: statCard.averageDiastolic, pulse: statCard.averagePulse)
+            Spacer()
         }
         
-        VStack {
-            Text("Diastolic")
-            HStack {
-                Text("Lowest: \(statCard.lowestDiastolic)")
-                Text("Highest: \(statCard.highestDiastolic)")
+        HStack {
+            Spacer()
+            VStack {
+                Text("Systolic")
+                HStack {
+                    Text("Lowest: \(statCard.lowestSystolic)")
+                    Text("Highest: \(statCard.highestSystolic)")
+                }
             }
+            Spacer()
         }
         
-        VStack {
-            Text("Pulse")
-            HStack {
-                Text("Lowest: \(statCard.lowestDiastolic)")
-                Text("Highest: \(statCard.highestDiastolic)")
+        HStack {
+            Spacer()
+            VStack {
+                Text("Diastolic")
+                HStack {
+                    Text("Lowest: \(statCard.lowestDiastolic)")
+                    Text("Highest: \(statCard.highestDiastolic)")
+                }
             }
+            Spacer()
         }
+        
+        HStack {
+            Spacer()
+            VStack {
+                Text("Pulse")
+                HStack {
+                    Text("Lowest: \(statCard.lowestDiastolic)")
+                    Text("Highest: \(statCard.highestDiastolic)")
+                }
+            }
+            Spacer()
+        }
+        
+        
+        
+        
+        
         
     }
 }

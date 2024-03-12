@@ -59,6 +59,7 @@
 		D343B2A32B9F478A00A43BDD /* StatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343B2A22B9F478A00A43BDD /* StatCard.swift */; };
 		D343B2A52B9F496F00A43BDD /* StatCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343B2A42B9F496F00A43BDD /* StatCardView.swift */; };
 		D343B2A72BA0571600A43BDD /* LineChartLegend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343B2A62BA0571600A43BDD /* LineChartLegend.swift */; };
+		D343B2A92BA0CD0C00A43BDD /* BloodPressureReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D343B2A82BA0CD0C00A43BDD /* BloodPressureReadingView.swift */; };
 		D348AB662B9DAFB3001DD836 /* LogStatsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D348AB652B9DAFB3001DD836 /* LogStatsManager.swift */; };
 		D348AB682B9DB095001DD836 /* LogDataSelectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D348AB672B9DB095001DD836 /* LogDataSelectionType.swift */; };
 		D348AB6A2B9DB5AF001DD836 /* ChartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D348AB692B9DB5AF001DD836 /* ChartDataManager.swift */; };
@@ -127,6 +128,7 @@
 		D343B2A22B9F478A00A43BDD /* StatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCard.swift; sourceTree = "<group>"; };
 		D343B2A42B9F496F00A43BDD /* StatCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCardView.swift; sourceTree = "<group>"; };
 		D343B2A62BA0571600A43BDD /* LineChartLegend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartLegend.swift; sourceTree = "<group>"; };
+		D343B2A82BA0CD0C00A43BDD /* BloodPressureReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureReadingView.swift; sourceTree = "<group>"; };
 		D348AB652B9DAFB3001DD836 /* LogStatsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogStatsManager.swift; sourceTree = "<group>"; };
 		D348AB672B9DB095001DD836 /* LogDataSelectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDataSelectionType.swift; sourceTree = "<group>"; };
 		D348AB692B9DB5AF001DD836 /* ChartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDataManager.swift; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 			children = (
 				D32048122B7225710034BA4C /* NumberTextFieldView.swift */,
 				D32048132B7225710034BA4C /* CustomButton.swift */,
+				D343B2A82BA0CD0C00A43BDD /* BloodPressureReadingView.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				D32048582B722CA20034BA4C /* OptionalFunc.swift in Sources */,
 				D320481E2B7225710034BA4C /* LogObjectStore.swift in Sources */,
 				D32048362B7225710034BA4C /* ExampleDataGenerator.swift in Sources */,
+				D343B2A92BA0CD0C00A43BDD /* BloodPressureReadingView.swift in Sources */,
 				D348AB6A2B9DB5AF001DD836 /* ChartDataManager.swift in Sources */,
 				D320483B2B7225720034BA4C /* DataDownloadManager.swift in Sources */,
 				D320484C2B7225720034BA4C /* TabBarView.swift in Sources */,

@@ -65,7 +65,7 @@ struct LogDetailView: View {
                     }
                     .pickerStyle(.segmented)
                 } else {
-                    Text("Arm: \(log.unwrappedArm)")
+                    Text("Arm: \(log.unwrappedArm.capitalized)")
                 }
             }
             
