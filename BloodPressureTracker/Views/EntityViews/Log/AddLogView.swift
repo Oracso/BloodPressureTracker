@@ -64,6 +64,8 @@ struct AddLogView: View {
             }
             
 
+            ConfoundersParentView(log: log)
+            
             
             Section("Notes:") {
                 if notes {

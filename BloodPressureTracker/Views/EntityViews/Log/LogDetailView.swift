@@ -90,9 +90,7 @@ struct LogDetailView: View {
             }
             
             
-            
-            ConfoundersSectionView(confoundersString: $log.confounders)
-            
+            ConfoundersParentView(log: log)
             
             Section("Notes:") {
                 if vem.isEditing {

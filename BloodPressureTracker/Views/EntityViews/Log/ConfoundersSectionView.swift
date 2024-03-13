@@ -8,48 +8,50 @@
 import SwiftUI
 
 struct ConfoundersSectionView: View {
-    @Binding var confoundersString: String?
-    @State private var confoundersDic: [String: String] = [:]
+    @Binding var confounders: String?
+    @Binding var confoundersDic: [String: String]
+    @State private var showSheet: Bool = false
     var body: some View {
-        if let confoundersString {
-            Section {
-                ForEach(confoundersDic.sorted(by: >), id: \.key) { confounder, description in
-                    DisclosureGroup(confounder.capitalized) {
-                        Text(description)
+        
+        Section {
+            ForEach(confoundersDic.sorted(by: <), id: \.key) { confounder, description in
+                DisclosureGroup(confounder.capitalized) {
+                    Text(description)
+                }
+                
+                .swipeActions(edge: .trailing) {
+                    Button(role: .destructive) {
+                        confoundersDic.removeValue(forKey: confounder)
+                    } label: {
+                        Label("Delete", systemImage: "trash")
                     }
-                    
-                    .swipeActions(edge: .trailing) {
-                        Button(role: .destructive) {
-//                            confoundersDic[c]
-                        } label: {
-                            Label("Delete", systemImage: "trash")
-                        }
-                    }
-                    
-                    
                 }
                 
                 
-            } header: {
-                HStack {
-                    Text("Confounding Variables:")
-                    Spacer()
-                    
-                    Button("Edit") {
-                        
-                    }
-                    .font(.system(size: 14))
+            }
+            
+            
+        } header: {
+            HStack {
+                Text("Confounders:")
+                Spacer()
+                Button("+") {
+                    showSheet = true
                 }
+                .font(.system(size: 20))
+                
             }
-            
-            .onAppear() {
-                confoundersDic = JSONManager.jsonStringToDictionary(confoundersString, String.self, String.self)
-            }
-            
-            
         }
         
-            
+        .sheet(isPresented: $showSheet, content: {
+            ConfounderSheet(confoundersDic: $confoundersDic, showSheet: $showSheet)
+        })
+        
+        
+        
+        
+        
+        
         
     }
 }
@@ -57,11 +59,11 @@ struct ConfoundersSectionView: View {
 #Preview {
     NavigationStack {
         List {
-            ConfoundersSectionView(confoundersString: .createBinding(JSONManager.dictionaryToJsonString(dic)))
+            ConfoundersSectionView(confounders: .createBinding(JSONManager.dictionaryToJsonString(dic)), confoundersDic: .createBinding([:]))
         }
     }
 }
 
-let dic = ["exercise" : "worked out 30 mins ago", "sleep": "only had 4 hours sleep"]
+
 
 

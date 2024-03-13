@@ -46,7 +46,6 @@
 		D320485C2B724BA30034BA4C /* LogDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320485B2B724BA30034BA4C /* LogDataManager.swift */; };
 		D32048602B724FFE0034BA4C /* Log+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320485E2B724FFE0034BA4C /* Log+CoreDataClass.swift */; };
 		D32048612B724FFE0034BA4C /* Log+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320485F2B724FFE0034BA4C /* Log+CoreDataProperties.swift */; };
-		D32048632B7254150034BA4C /* AddConfoundersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32048622B7254150034BA4C /* AddConfoundersView.swift */; };
 		D33328E32B74C49400E8F0E2 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328E22B74C49400E8F0E2 /* StatisticsView.swift */; };
 		D33328E62B74E86F00E8F0E2 /* LogAveragesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328E52B74E86F00E8F0E2 /* LogAveragesView.swift */; };
 		D33328EA2B74E94300E8F0E2 /* AveragesComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33328E92B74E94300E8F0E2 /* AveragesComponentView.swift */; };
@@ -63,6 +62,8 @@
 		D348AB662B9DAFB3001DD836 /* LogStatsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D348AB652B9DAFB3001DD836 /* LogStatsManager.swift */; };
 		D348AB682B9DB095001DD836 /* LogDataSelectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D348AB672B9DB095001DD836 /* LogDataSelectionType.swift */; };
 		D348AB6A2B9DB5AF001DD836 /* ChartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D348AB692B9DB5AF001DD836 /* ChartDataManager.swift */; };
+		D35B6E122BA1C61E00189AB2 /* ConfounderSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B6E112BA1C61E00189AB2 /* ConfounderSheet.swift */; };
+		D35B6E142BA1DCC400189AB2 /* ConfoundersParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B6E132BA1DCC400189AB2 /* ConfoundersParentView.swift */; };
 		D362A6C52B9CFF0E00A1E29B /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362A6C42B9CFF0E00A1E29B /* LineChartView.swift */; };
 		D362A6C82B9CFF2E00A1E29B /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362A6C72B9CFF2E00A1E29B /* ChartData.swift */; };
 		D362A6CB2B9D003F00A1E29B /* DataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362A6CA2B9D003F00A1E29B /* DataPoint.swift */; };
@@ -115,7 +116,6 @@
 		D320485B2B724BA30034BA4C /* LogDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDataManager.swift; sourceTree = "<group>"; };
 		D320485E2B724FFE0034BA4C /* Log+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Log+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D320485F2B724FFE0034BA4C /* Log+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Log+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		D32048622B7254150034BA4C /* AddConfoundersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConfoundersView.swift; sourceTree = "<group>"; };
 		D33328E22B74C49400E8F0E2 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		D33328E52B74E86F00E8F0E2 /* LogAveragesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAveragesView.swift; sourceTree = "<group>"; };
 		D33328E92B74E94300E8F0E2 /* AveragesComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AveragesComponentView.swift; sourceTree = "<group>"; };
@@ -132,6 +132,8 @@
 		D348AB652B9DAFB3001DD836 /* LogStatsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogStatsManager.swift; sourceTree = "<group>"; };
 		D348AB672B9DB095001DD836 /* LogDataSelectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDataSelectionType.swift; sourceTree = "<group>"; };
 		D348AB692B9DB5AF001DD836 /* ChartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDataManager.swift; sourceTree = "<group>"; };
+		D35B6E112BA1C61E00189AB2 /* ConfounderSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfounderSheet.swift; sourceTree = "<group>"; };
+		D35B6E132BA1DCC400189AB2 /* ConfoundersParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfoundersParentView.swift; sourceTree = "<group>"; };
 		D362A6C42B9CFF0E00A1E29B /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		D362A6C72B9CFF2E00A1E29B /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		D362A6CA2B9D003F00A1E29B /* DataPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPoint.swift; sourceTree = "<group>"; };
@@ -340,8 +342,9 @@
 			children = (
 				D320480B2B7225710034BA4C /* AddLogView.swift */,
 				D320480C2B7225710034BA4C /* LogDetailView.swift */,
+				D35B6E132BA1DCC400189AB2 /* ConfoundersParentView.swift */,
 				D3F2D49F2B7279CC00E34784 /* ConfoundersSectionView.swift */,
-				D32048622B7254150034BA4C /* AddConfoundersView.swift */,
+				D35B6E112BA1C61E00189AB2 /* ConfounderSheet.swift */,
 			);
 			path = Log;
 			sourceTree = "<group>";
@@ -566,13 +569,13 @@
 				D32048362B7225710034BA4C /* ExampleDataGenerator.swift in Sources */,
 				D343B2A92BA0CD0C00A43BDD /* BloodPressureReadingView.swift in Sources */,
 				D348AB6A2B9DB5AF001DD836 /* ChartDataManager.swift in Sources */,
+				D35B6E142BA1DCC400189AB2 /* ConfoundersParentView.swift in Sources */,
 				D320483B2B7225720034BA4C /* DataDownloadManager.swift in Sources */,
 				D320484C2B7225720034BA4C /* TabBarView.swift in Sources */,
 				D320481A2B7225710034BA4C /* Extensions.swift in Sources */,
 				D3F2D4A52B72897B00E34784 /* ChartLineColours.swift in Sources */,
 				D32048472B7225720034BA4C /* AllXView.swift in Sources */,
 				D343B2A32B9F478A00A43BDD /* StatCard.swift in Sources */,
-				D32048632B7254150034BA4C /* AddConfoundersView.swift in Sources */,
 				D32048372B7225710034BA4C /* RandomisedObjectData.swift in Sources */,
 				D32048492B7225720034BA4C /* LogDetailView.swift in Sources */,
 				D362A6C52B9CFF0E00A1E29B /* LineChartView.swift in Sources */,
@@ -602,6 +605,7 @@
 				D362A6CE2B9D08E300A1E29B /* StatisticsChartParentView.swift in Sources */,
 				D32048392B7225710034BA4C /* ActivityViewController.swift in Sources */,
 				D343B29C2B9F282B00A43BDD /* ChartDateFilterView.swift in Sources */,
+				D35B6E122BA1C61E00189AB2 /* ConfounderSheet.swift in Sources */,
 				D343B2A12B9F426B00A43BDD /* ChartSeries.swift in Sources */,
 				D320484E2B7225720034BA4C /* CustomButton.swift in Sources */,
 				D32048482B7225720034BA4C /* AddLogView.swift in Sources */,
