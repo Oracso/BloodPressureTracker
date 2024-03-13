@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ConfoundersSectionView: View {
+    @EnvironmentObject var vem: ViewEditingManager
     @Binding var confounders: String?
     @Binding var confoundersDic: [String: String]
     @State private var showSheet: Bool = false
@@ -35,10 +36,14 @@ struct ConfoundersSectionView: View {
             HStack {
                 Text("Confounders:")
                 Spacer()
-                Button("+") {
-                    showSheet = true
+                if vem.isEditing {
+                    Button("+") {
+                        showSheet = true
+                    }
+                    .font(.system(size: 20))
                 }
-                .font(.system(size: 20))
+                
+                
                 
             }
         }
@@ -60,6 +65,7 @@ struct ConfoundersSectionView: View {
     NavigationStack {
         List {
             ConfoundersSectionView(confounders: .createBinding(JSONManager.dictionaryToJsonString(dic)), confoundersDic: .createBinding([:]))
+                .environmentObject(ViewEditingManager(CoreDataPreviewManager.previewManager.context))
         }
     }
 }

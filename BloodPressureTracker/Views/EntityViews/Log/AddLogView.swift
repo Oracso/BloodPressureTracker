@@ -65,7 +65,8 @@ struct AddLogView: View {
             
 
             ConfoundersParentView(log: log)
-            
+                // TODO: local vem is not setting isEditing = true
+                
             
             Section("Notes:") {
                 if notes {
