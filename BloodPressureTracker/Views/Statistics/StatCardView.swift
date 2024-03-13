@@ -11,51 +11,29 @@ struct StatCardView: View {
     @ObservedObject var statCard: StatCard
     var body: some View {
         
-        HStack {
-            Spacer()
-            Text("Average:")
-            BloodPressureReadingView(systolic: statCard.averageSystolic, diastolic: statCard.averageDiastolic, pulse: statCard.averagePulse)
-            Spacer()
-        }
         
-        HStack {
-            Spacer()
-            VStack {
-                Text("Systolic")
-                HStack {
-                    Text("Lowest: \(statCard.lowestSystolic)")
-                    Text("Highest: \(statCard.highestSystolic)")
-                }
+        Section("Average:") {
+            HStack {
+                Spacer()
+                BloodPressureReadingView(systolic: statCard.averageSystolic, diastolic: statCard.averageDiastolic, pulse: statCard.averagePulse)
+                Spacer()
             }
-            Spacer()
         }
         
-        HStack {
-            Spacer()
-            VStack {
-                Text("Diastolic")
-                HStack {
-                    Text("Lowest: \(statCard.lowestDiastolic)")
-                    Text("Highest: \(statCard.highestDiastolic)")
-                }
-            }
-            Spacer()
+        Section("Systolic:") {
+            Text("Lowest: \(statCard.lowestSystolic)")
+            Text("Highest: \(statCard.highestSystolic)")
         }
         
-        HStack {
-            Spacer()
-            VStack {
-                Text("Pulse")
-                HStack {
-                    Text("Lowest: \(statCard.lowestDiastolic)")
-                    Text("Highest: \(statCard.highestDiastolic)")
-                }
-            }
-            Spacer()
+        Section("Diastolic:") {
+            Text("Lowest: \(statCard.lowestDiastolic)")
+            Text("Highest: \(statCard.highestDiastolic)")
         }
         
-        
-        
+        Section("Pulse:") {
+            Text("Lowest: \(statCard.lowestDiastolic)")
+            Text("Highest: \(statCard.highestDiastolic)")
+        }
         
         
         

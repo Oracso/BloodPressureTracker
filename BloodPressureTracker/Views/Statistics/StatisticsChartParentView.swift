@@ -25,23 +25,26 @@ struct StatisticsChartParentView: View {
         chartData = chartDataManager.createChartData(logStatsManager.filteredLogs, dataTypeSelection: logStatsManager.dataTypeSelection)
     }
     
-        
+    
     var body: some View {
         
         
-        VStack {
+        Section("Charts:") {
             
-            ChartDateFilterView(logStatsManager: logStatsManager)
-            
-            LineChartView(dataTypeSelection: $logStatsManager.dataTypeSelection, chartData: chartData, fromDate: $logStatsManager.fromDate, toDate: $logStatsManager.toDate)
-                .frame(minHeight: 200)
-            Picker("Data Tye Selection", selection: $logStatsManager.dataTypeSelection) {
-                ForEach(LogDataSelectionType.allCases) { dataType in
-                    Text(dataType.rawValue.capitalized)
-                        .tag(dataType.rawValue)
+            VStack {
+                
+                ChartDateFilterView(logStatsManager: logStatsManager)
+                
+                LineChartView(dataTypeSelection: $logStatsManager.dataTypeSelection, chartData: chartData, fromDate: $logStatsManager.fromDate, toDate: $logStatsManager.toDate)
+                    .frame(minHeight: 200)
+                Picker("Data Tye Selection", selection: $logStatsManager.dataTypeSelection) {
+                    ForEach(LogDataSelectionType.allCases) { dataType in
+                        Text(dataType.rawValue.capitalized)
+                            .tag(dataType.rawValue)
+                    }
                 }
-            }
                 .pickerStyle(.segmented)
+            }
         }
         
         
@@ -68,8 +71,8 @@ struct StatisticsChartParentView: View {
                 createChartData()
             }
         
-            
-            
+        
+        
         
         
     }
@@ -78,10 +81,10 @@ struct StatisticsChartParentView: View {
 #Preview {
     NavigationStack {
         List {
-            Section("Charts:") {
-                StatisticsChartParentView(allLogs: AppDataStore(CoreDataPreviewManager.previewManager.context).objects.logOS.logs)
-                    .environmentObject(SettingsManager())
-            }
+            
+            StatisticsChartParentView(allLogs: AppDataStore(CoreDataPreviewManager.previewManager.context).objects.logOS.logs)
+                .environmentObject(SettingsManager())
+            
         }
     }
 }

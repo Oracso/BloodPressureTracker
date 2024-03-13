@@ -18,9 +18,8 @@ struct StatisticsView: View {
                     LogAveragesView()
                 }
                 
-                Section("Chart:") {
-                    StatisticsChartParentView(allLogs: ads.objects.logOS.logs)
-                }
+                StatisticsChartParentView(allLogs: ads.objects.logOS.logs)
+                
                 
                 
             }
