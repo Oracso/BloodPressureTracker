@@ -17,6 +17,8 @@ struct AddLogView: View {
     
     @EnvironmentObject var vem: ViewEditingManager
     
+    @State private var notes: Bool = false
+    
     var body: some View {
         
         List {
@@ -62,11 +64,27 @@ struct AddLogView: View {
             }
             
 
+            
+            Section("Notes:") {
+                if notes {
+                    TextEditor(text: $log.notes.defaultValue(""))
+                        .frame(minHeight: 75)
+                }
+                Toggle(notes ? "Remove Notes" : "Add Notes", isOn: $notes)
+                
+            }
 
 
         }
         
         .navigationTitle("Add Log")
+        
+        
+        .onChange(of: notes) {
+            if notes == false {
+                log.notes = nil
+            }
+        }
         
         
     }

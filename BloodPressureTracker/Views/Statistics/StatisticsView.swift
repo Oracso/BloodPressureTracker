@@ -14,12 +14,11 @@ struct StatisticsView: View {
         NavigationStack {
             List {
                 
+                StatisticsChartParentView(allLogs: ads.objects.logOS.logs)
+                
                 Section("Log Averages:") {
                     LogAveragesView()
                 }
-                
-                StatisticsChartParentView(allLogs: ads.objects.logOS.logs)
-                
                 
                 
             }

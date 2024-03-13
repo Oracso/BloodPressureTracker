@@ -38,8 +38,10 @@ struct LogDetailView: View {
             
             Section("Diastolic:") {
                 if vem.isEditing {
-                    TextField("Diastolic", text: $log.diastolic.toStringBinding())
-                        .keyboardType(.numberPad)
+                    LabeledContent("Diastolic:") {
+                        TextField("Diastolic", text: $log.diastolic.toStringBinding())
+                            .keyboardType(.numberPad)
+                    }
                 } else {
                     Text("Diastolic: \(log.diastolic)")
                 }
@@ -48,8 +50,10 @@ struct LogDetailView: View {
             
             Section("Pulse:") {
                 if vem.isEditing {
-                    TextField("Pulse", text: $log.pulse.toStringBinding())
-                        .keyboardType(.numberPad)
+                    LabeledContent("Pulse:") {
+                        TextField("Pulse", text: $log.pulse.toStringBinding())
+                            .keyboardType(.numberPad)
+                    }
                 } else {
                     Text("Pulse: \(log.pulse)")
                 }
@@ -65,16 +69,23 @@ struct LogDetailView: View {
                     }
                     .pickerStyle(.segmented)
                 } else {
-                    Text("Arm: \(log.unwrappedArm.capitalized)")
+                    Picker("Arm", selection: $log.arm.defaultValue(log.unwrappedArm)) {
+                        ForEach(ArmType.allCases) {
+                            Text($0.rawValue.capitalized).tag($0.rawValue)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    .disabled(true)
                 }
             }
             
             
             Section("Date:") {
                 if vem.isEditing {
-                    DatePicker("Date", selection: $log.date.defaultValue(.now))
+                    DatePicker("Date:", selection: $log.date.defaultValue(.now))
                 } else {
-                    Text("Date: \(log.formattedDate)")
+                    DatePicker("Date:", selection: $log.date.defaultValue(.now))
+                        .disabled(true)
                 }
             }
             
@@ -82,6 +93,17 @@ struct LogDetailView: View {
             
             ConfoundersSectionView(confoundersString: $log.confounders)
             
+            
+            Section("Notes:") {
+                if vem.isEditing {
+                    TextEditor(text: $log.notes.defaultValue(""))
+                        .frame(minHeight: 75)
+                } else {
+                    if let notes = log.notes {
+                        Text(notes)
+                    }
+                }
+            }
             
             GenericDeleteObjectButton(log, dismiss)
             
