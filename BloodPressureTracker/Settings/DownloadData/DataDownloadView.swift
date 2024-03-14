@@ -33,7 +33,7 @@ struct DataDownloadView: View {
                 switch entity.entity {
                 case .log:
                     let castedObjects = objects as! [Log]
-//                    dDManager.writeObjectsAndAddURLToArray(castedObjects)
+                    dDManager.writeObjectsAndAddURLToArray(castedObjects)
                 }
                 
             }

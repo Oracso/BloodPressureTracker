@@ -31,9 +31,6 @@ struct ChartDateFilterView: View {
             
         }
         
-        
-        // TODO: If from date is after to date it crashes 
-        
         .onChange(of: logStatsManager.datePeriod) {
             logStatsManager.filterLogsByDate()
         }

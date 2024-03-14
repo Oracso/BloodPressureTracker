@@ -76,9 +76,6 @@ struct LogAveragesView: View {
         }
         
         
-        
-        
-        
         .onChange(of: statsManager.timeFilter) {
             calculateAverages()
         }

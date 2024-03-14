@@ -29,7 +29,6 @@ class ViewEditingManager: ObservableObject {
     func discardChanges() {
         context.undo()
         inactiveEditMode()
-        //        activeEditMode()
     }
     
     func saveChanges() {

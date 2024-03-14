@@ -9,19 +9,6 @@ import SwiftUI
 
 @main
 struct BloodPressureTrackerApp: App {
-
-//    init() {
-//        let defaults = UserDefaults.standard
-//        if defaults.bool(forKey: "hasLaunched") == true {
-//            print("Not first launch")
-//            // Code
-//        } else {
-//            // MARK: - First Launch Code
-//            print("First Launch")
-//            defaults.set(true, forKey: "hasLaunched")
-////            let _ = CoreDataPreviewManager(CoreDataManager.shared.container.viewContext)
-//        }
-//    }
     
     let coreDataManager = CoreDataManager.shared
     

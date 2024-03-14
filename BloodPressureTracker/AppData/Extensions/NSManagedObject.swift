@@ -60,8 +60,6 @@ extension NSManagedObject {
             print("")
         case .objectStore:
             print("")
-            // TODO: Can't use NSSortDescriptor here as don't know what the key would be
-    //            request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         }
         
         return request
@@ -84,21 +82,6 @@ extension NSManagedObject: Identifiable {
     
 }
 
-
-// extension NSManagedObject {
-    
-//      func returnChildContext(_ context: NSManagedObjectContext) -> NSManagedObjectContext {
-//         // Initialize Managed Object Context
-//         let childContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-
-//         // Configure Managed Object Context
-//         childContext.parent = context
-
-//         return childContext
-//     }
-    
-    
-// }
 
 
 // MARK: - Class Casting

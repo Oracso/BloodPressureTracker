@@ -11,7 +11,6 @@ struct StatCardView: View {
     @ObservedObject var statCard: StatCard
     var body: some View {
         
-        
         Section("Average:") {
             HStack {
                 Spacer()

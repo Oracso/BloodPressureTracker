@@ -51,8 +51,6 @@ struct StatisticsChartParentView: View {
         StatCardView(statCard: statCard)
         
         
-        
-        
             .onAppear() {
                 createChartData()
             }
@@ -70,9 +68,6 @@ struct StatisticsChartParentView: View {
             .onChange(of: logStatsManager.dataTypeSelection) {
                 createChartData()
             }
-        
-        
-        
         
         
     }

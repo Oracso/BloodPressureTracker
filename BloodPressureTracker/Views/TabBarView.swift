@@ -23,7 +23,6 @@ struct TabBarView: View {
                     Label("Statistics", systemImage: "book")
                 }
             
-             
         }
         
     }

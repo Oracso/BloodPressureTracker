@@ -15,8 +15,6 @@ struct AddLogView: View {
     
     @ObservedObject var log: Log
     
-    @EnvironmentObject var vem: ViewEditingManager
-    
     @State private var notes: Bool = false
     
     var body: some View {
@@ -95,5 +93,6 @@ struct AddLogView: View {
 #Preview {
     NavigationStack {
         AddLogView(ChildContextObjectContainer(CoreDataManager.preview.container.viewContext, .log).object.castedAsLog())
+            .environmentObject(ViewEditingManager(CoreDataManager.preview.container.viewContext))
     }
 }

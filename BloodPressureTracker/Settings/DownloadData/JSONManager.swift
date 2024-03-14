@@ -97,7 +97,6 @@ struct JSONManager {
         } catch {
             print("the url could not be converted to data")
             print(error.localizedDescription)
-            // TODO: don't like this return, should it be an optional ?
             return Data()
         }
     }

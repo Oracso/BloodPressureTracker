@@ -11,27 +11,11 @@ import CoreData
 
 extension Log {
     
-//    public var unwrappedID: UUID {
-//        id ?? UUID()
-//    }
-
-    // public var unwrappedName: String {
-    //     name ?? "name found nil"
-    // }
-    
 
      public var unwrappedArm: String {
          arm ?? "no record found"
      }
 
-//    public var unwrapped<#property#>: <#Type#> {
-//        <#property#> ?? <#example#>
-//    }
-    
-    // public var <#attribute#>Array: [<#Entity#>] {
-    //      <#attribute#>.unwrap(<#Entity#>.self)
-    // }
-        
     public var unwrappedDate: Date {
         date ?? .now
     }
@@ -89,60 +73,6 @@ extension Log {
 //        TestLog(systolic: 220, diastolic: 90, pulse: 80, arm: "left" , date: Date.now),
 //    ]
 //}
-
-
-
-//// MARK: - Coding Keys
-//
-//private enum CodingKeys : String, CodingKey {
-//    case id, name, <#property#>, XXX
-//}
-//
-//
-//// MARK: - Encodable
-//
-//public func encode(to encoder: Encoder) throws {
-//    var container = encoder.container(keyedBy: CodingKeys.self)
-//    try container.encode(id, forKey: .id)
-//    try container.encode(name, forKey: .name)
-//
-//    // try container.encode(<#property#>, forKey: .<#property#>)
-//    
-//    // try container.encode(XXXArray.map({$0.id}), forKey: .XXX)
-//}
-//
-//
-//// MARK: - Decodable
-//
-//
-//public required convenience init(from decoder: Decoder) throws {
-//    
-//    
-//    guard let contextUserInfoKey = CodingUserInfoKey.context,
-//          let managedObjectContext = decoder.userInfo[contextUserInfoKey] as? NSManagedObjectContext,
-//          let entity = NSEntityDescription.entity(forEntityName: "Log", in: managedObjectContext) else {  fatalError("Failed to decode Log!")  }
-//    
-//    self.init(entity: entity, insertInto: managedObjectContext)
-//    let container = try decoder.container(keyedBy: CodingKeys.self)
-//    
-//    id = try container.decode(UUID.self, forKey: .id)
-//    name = try container.decode(String.self, forKey: .name)
-//
-//    // <#property#> = try container.decode(<#Type#>.self, forKey: .<#property#>)
-//    
-//    // let XXXArray = try container.decode([XXX].self, forKey: .XXX)
-//    // self.XXX = Set(XXXArray) as NSSet
-//    
-//    
-//    
-//}
-//
-//
-//extension Log: Codable { }
-
-
-
-
 
 
 

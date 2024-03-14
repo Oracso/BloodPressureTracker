@@ -81,7 +81,7 @@ struct ConfoundersSectionView: View {
 #Preview {
     NavigationStack {
         List {
-            ConfoundersSectionView(confounders: .createBinding(JSONManager.dictionaryToJsonString(dic)), confoundersDic: .createBinding([:]))
+            ConfoundersSectionView(confounders: .createBinding(JSONManager.dictionaryToJsonString(["":""])), confoundersDic: .createBinding([:]))
                 .environmentObject(ViewEditingManager(CoreDataPreviewManager.previewManager.context))
         }
     }

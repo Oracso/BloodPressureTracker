@@ -35,10 +35,6 @@ struct CoreDataPreviewManager {
 
         createAllExampleObjects([.log], 5)
         
-        // Add entity relationships
-
-        // linkOneToManyEntities(Log.self, XXX.self, .XXX)
-        
         context.saveIfChanges()
     }
     
@@ -72,6 +68,7 @@ struct CoreDataPreviewManager {
         }
         
     }
+    
     
     
     // MARK: - Create Entities

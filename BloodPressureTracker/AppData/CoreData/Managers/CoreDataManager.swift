@@ -54,7 +54,6 @@ struct CoreDataManager {
             }
         })
 
-        // container.viewContext.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
         container.viewContext.automaticallyMergesChangesFromParent = true
         
         print("Persistent Container has been created \(inMemory ? "(EPHEMERAL STORES)" : "(PERMANENT STORES)")")
@@ -71,10 +70,6 @@ struct CoreDataManager {
         // MARK: load example objects
         
         _ = CoreDataPreviewManager(viewContext)
-        
-        // MARK: SAVE examples
-        // TODO: I don't think it even needs to be saved..?
-//        viewContext.saveIfChanges()
         
         return result
     }()

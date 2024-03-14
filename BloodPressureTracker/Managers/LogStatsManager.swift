@@ -54,7 +54,11 @@ class LogStatsManager: ObservableObject {
     }
     
     private func filter() {
-        filteredLogs = logDataManager.filterByDate(allLogs, fromDate: fromDate, toDate: toDate)
+        if fromDate > toDate {
+            fromDate = toDate
+        } else {
+            filteredLogs = logDataManager.filterByDate(allLogs, fromDate: fromDate, toDate: toDate)
+        }
     }
     
     

@@ -27,6 +27,3 @@ extension Log {
 
 }
 
-//extension Log : Identifiable {
-//
-//}

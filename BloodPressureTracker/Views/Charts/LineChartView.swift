@@ -56,8 +56,6 @@ struct LineChartView: View {
                     .foregroundStyle(settingsManager.chartLineColours.pulse)
                     .symbol(.cross)
                     
-                    //                .foregroundStyle(by: .value("Data Type", LogDataType.allCases))
-                    
                 case .systolic:
                     ForEach(chartData.series.first(where: {$0.name == "systolic"})?.dataPoints ?? []) {
                         LineMark(
@@ -111,19 +109,9 @@ struct LineChartView: View {
             
             // Line Graph Animations
             .transaction { transaction in
-                //            transaction.animation = .spring()
-                //                self.lineColour
                 transaction.animation = nil
             }
-            
-            // Legend
-            //        .chartLegend(position: .top) {
-            //            HStack {
-            //                Text("ddxxxxxxxxxx")
-            //                Text("ddd")
-            //            }
-            //        }
-            //        .chartLegend(.visible)
+
             
             
             VStack {

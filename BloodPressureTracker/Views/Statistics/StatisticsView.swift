@@ -20,7 +20,6 @@ struct StatisticsView: View {
                     LogAveragesView()
                 }
                 
-                
             }
             
             .navigationTitle("Statistics")

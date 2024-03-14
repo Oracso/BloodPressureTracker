@@ -44,4 +44,4 @@ struct ConfoundersParentView: View {
     }
 }
 
-let dic = ["exercise" : "worked out 30 mins ago", "sleep": "only had 4 hours sleep"]
+

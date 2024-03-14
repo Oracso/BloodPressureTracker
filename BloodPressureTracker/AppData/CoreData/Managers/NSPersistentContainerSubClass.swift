@@ -21,7 +21,6 @@ class NSPersistentContainerSubClass: NSPersistentContainer {
 //                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
                 // The fatalError() causes the app to crash, may be useful during development but DO NOT SHIP
             }
-        // where to include "print("No changes to context found - context NOT saved")" ???
         }
     
     // "The above example adds a saveContext function to the container, to improve performance by saving the context only when there are changes." - Apple Documentation
