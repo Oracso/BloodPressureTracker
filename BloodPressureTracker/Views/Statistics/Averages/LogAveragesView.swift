@@ -28,52 +28,56 @@ struct LogAveragesView: View {
     
     var body: some View {
         
-        ZStack(alignment: .bottomTrailing) {
+        VStack {
             
-            VStack {
-                
-                
-                HStack {
-                    if toggleView {
-                        Spacer()
-                        AveragesComponentView(average: $statsManager.systolicAverage, logDataType: .systolic)
-                        Spacer()
-                        AveragesComponentView(average: $statsManager.diastolicAverage, logDataType: .diastolic)
-                        Spacer()
-                        AveragesComponentView(average: $statsManager.pulseAverage, logDataType: .pulse)
-                        Spacer()
-                    } else {
-                        BloodPressureReadingView(systolic: statsManager.systolicAverage, diastolic: statsManager.diastolicAverage, pulse: statsManager.pulseAverage)
-                            .scaleEffect(1.5)
-                            .frame(minHeight: 110)
+            ZStack(alignment: .bottomTrailing) {
+                VStack {
+                    HStack {
+                        if toggleView {
+                            Spacer()
+                            AveragesComponentView(average: $statsManager.systolicAverage, logDataType: .systolic)
+                            Spacer()
+                            AveragesComponentView(average: $statsManager.diastolicAverage, logDataType: .diastolic)
+                            Spacer()
+                            AveragesComponentView(average: $statsManager.pulseAverage, logDataType: .pulse)
+                            Spacer()
+                        } else {
+                            BloodPressureReadingView(systolic: statsManager.systolicAverage, diastolic: statsManager.diastolicAverage, pulse: statsManager.pulseAverage)
+                                .scaleEffect(1.5)
+                                .frame(minHeight: 110)
+                        }
+                        
                     }
-                    
-                }
-                HStack {
-                    Spacer()
-                    Text("Filter By Time")
-                    Toggle("Filter By Time", isOn: $filterByTime)
-                        .labelsHidden()
-                    Spacer()
-                }
-                
-                if filterByTime {
-                    Text("\(statsManager.timeFilter.roundToIntOrDouble()):00")
-                    Slider(value: $statsManager.timeFilter, in: 1...24, step: 1)
+                    HStack {
+                        Spacer()
+                        Text("Filter By Time")
+                        Toggle("Filter By Time", isOn: $filterByTime)
+                            .labelsHidden()
+                        Spacer()
+                    }
                 }
                 
-                
+                Image(systemName: toggleView ? "heart.circle" : "heart.circle.fill")
+                    .scaleEffect(1.5)
+                    .foregroundStyle(toggleView ? .red : .green)
+                    .onTapGesture {
+                        toggleView.toggle()
+                    }
                 
             }
             
-            Image(systemName: toggleView ? "heart.circle" : "heart.circle.fill")
-                .scaleEffect(1.5)
-                .foregroundStyle(toggleView ? .red : .green)
-                .onTapGesture {
-                    toggleView.toggle()
-                }
+            if filterByTime {
+                Text("\(statsManager.timeFilter.roundToIntOrDouble()):00")
+                Slider(value: $statsManager.timeFilter, in: 1...24, step: 1)
+            }
+            
+            
             
         }
+        
+        
+        
+        
         
         .onChange(of: statsManager.timeFilter) {
             calculateAverages()

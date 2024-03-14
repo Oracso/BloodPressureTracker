@@ -12,38 +12,55 @@ struct ConfoundersSectionView: View {
     @Binding var confounders: String?
     @Binding var confoundersDic: [String: String]
     @State private var showSheet: Bool = false
+    var addLogView: Bool = false
     var body: some View {
         
         Section {
-            ForEach(confoundersDic.sorted(by: <), id: \.key) { confounder, description in
-                DisclosureGroup(confounder.capitalized) {
-                    Text(description)
-                }
-                
-                .swipeActions(edge: .trailing) {
-                    Button(role: .destructive) {
-                        confoundersDic.removeValue(forKey: confounder)
-                    } label: {
-                        Label("Delete", systemImage: "trash")
+            
+            if vem.isEditing {
+                ForEach(confoundersDic.sorted(by: <), id: \.key) { confounder, description in
+                    DisclosureGroup(confounder.capitalized) {
+                        Text(description)
+                    }
+                    .swipeActions(edge: .trailing) {
+                        Button(role: .destructive) {
+                            confoundersDic.removeValue(forKey: confounder)
+                        } label: {
+                            Label("Delete", systemImage: "trash")
+                        }
                     }
                 }
                 
-                
+            } else {
+                ForEach(confoundersDic.sorted(by: <), id: \.key) { confounder, description in
+                    DisclosureGroup(confounder.capitalized) {
+                        Text(description)
+                    }
+                }
             }
+            
+                
+                
+            
             
             
         } header: {
             HStack {
                 Text("Confounders:")
                 Spacer()
-                if vem.isEditing {
+                if addLogView {
                     Button("+") {
                         showSheet = true
                     }
                     .font(.system(size: 20))
+                } else {
+                    if vem.isEditing {
+                        Button("+") {
+                            showSheet = true
+                        }
+                        .font(.system(size: 20))
+                    }
                 }
-                
-                
                 
             }
         }

@@ -13,9 +13,12 @@ struct ConfoundersParentView: View {
     @State private var confoundersDic: [String: String] = [:]
     
     @State private var showSheet: Bool = false
+    
+    var addLogView: Bool = false
+    
     var body: some View {
         
-        ConfoundersSectionView(confounders: $log.confounders, confoundersDic: $confoundersDic)
+        ConfoundersSectionView(confounders: $log.confounders, confoundersDic: $confoundersDic, addLogView: addLogView)
         
         
             .onAppear() {
