@@ -33,7 +33,7 @@ struct CoreDataPreviewManager {
     
     func initExampleData() {
 
-        createAllExampleObjects([.log], 5)
+        createAllExampleObjects([.log], 100)
         
         context.saveIfChanges()
     }
@@ -64,7 +64,7 @@ struct CoreDataPreviewManager {
         
         switch entityType {
         case .log:
-            return modifier.createLog(date: ran.indexedDate, diastolic: ran.smallInt, systolic: ran.smallInt, pulse: ran.smallInt, arm: .allCases.randomElement()!, confounders: [:], notes: nil) as! T
+            return modifier.createLog(date: ran.indexedDate, diastolic: ran.randomDiastolic, systolic: ran.randomSystolic, pulse: ran.randomPulse, arm: .allCases.randomElement()!, confounders: [:], notes: nil) as! T
         }
         
     }

@@ -19,6 +19,9 @@ struct ConfounderSheet: View {
     }
     
     var body: some View {
+        
+        NavigationStack {
+        
         List {
             
             Section("Confounder") {
@@ -30,26 +33,28 @@ struct ConfounderSheet: View {
             }
             
             
-            Button("Save") {
-                addConfounder()
-                showSheet = false
-            }
-            
-            Button("Cancel") {
-                showSheet = false
-            }
-            
-            
-//            .toolbar {
-//                ToolbarItem {
-//                    Text("Ffff")
-//                }
-//            }
+                        
             
         }
         
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button("Cancel") {
+                    showSheet = false
+                }
+            }
+            ToolbarItem(placement: .topBarTrailing) {
+                Button("Save") {
+                    addConfounder()
+                    showSheet = false
+                }
+            }
+            
+        }
         
+        .navigationTitle("Add Confounder")
         
+    }
         
     }
 }
@@ -61,6 +66,7 @@ struct ConfounderSheet: View {
                 .sheet(isPresented: .createBinding(true), content: {
                     ConfounderSheet(confoundersDic: .createBinding([:]), showSheet: .createBinding(true))
                 })
+                .environmentObject(ViewEditingManager(CoreDataManager.preview.container.viewContext))
         }
     }
 }

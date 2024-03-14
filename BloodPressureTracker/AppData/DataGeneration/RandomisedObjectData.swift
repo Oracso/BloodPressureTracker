@@ -56,6 +56,10 @@ struct RandomisedObjectData {
     var int64Array: [Int64] { randomArray({ Int64(randomInt(nil)) }, 5) }
     var optionalInt64: Int64? = nil
     
+    var randomSystolic: Int { randomIntBetween(80, 140) }
+    var randomDiastolic: Int { randomIntBetween(60, 120) }
+    var randomPulse: Int { randomIntBetween(60, 100) }
+    
     // MARK: Coordinates
     
     var coordinates: CLLocationCoordinate2D { randomCoordinates() }

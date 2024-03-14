@@ -12,6 +12,7 @@ class LogStatsManager: ObservableObject {
     internal init(allLogs: [Log]) {
         self.allLogs = allLogs
         self.filteredLogs = allLogs
+        filterLogsByDate()
     }
     
     let allLogs: [Log]

@@ -108,9 +108,9 @@ struct LineChartView: View {
             
             
             // Line Graph Animations
-            .transaction { transaction in
-                transaction.animation = nil
-            }
+//            .transaction { transaction in
+//                transaction.animation = nil
+//            }
 
             
             
