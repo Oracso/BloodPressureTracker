@@ -19,6 +19,7 @@ struct LogDetailView: View {
     
     @EnvironmentObject var vem: ViewEditingManager
     
+    @FocusState var keyboardActive: Bool
     
     var body: some View {
         
@@ -30,6 +31,7 @@ struct LogDetailView: View {
                     LabeledContent("Systolic:") {
                         TextField("Systolic", text: $log.systolic.toStringBinding())
                             .keyboardType(.numberPad)
+                            .focused($keyboardActive)
                     }
                 } else {
                     Text("Systolic: \(log.systolic)")
@@ -41,6 +43,7 @@ struct LogDetailView: View {
                     LabeledContent("Diastolic:") {
                         TextField("Diastolic", text: $log.diastolic.toStringBinding())
                             .keyboardType(.numberPad)
+                            .focused($keyboardActive)
                     }
                 } else {
                     Text("Diastolic: \(log.diastolic)")
@@ -53,6 +56,7 @@ struct LogDetailView: View {
                     LabeledContent("Pulse:") {
                         TextField("Pulse", text: $log.pulse.toStringBinding())
                             .keyboardType(.numberPad)
+                            .focused($keyboardActive)
                     }
                 } else {
                     Text("Pulse: \(log.pulse)")
@@ -109,6 +113,19 @@ struct LogDetailView: View {
         }
         
         .navigationTitle(log.formattedDate)
+        
+        
+        .toolbar {
+            ToolbarItem(placement: .keyboard) {
+                HStack {
+                    Spacer()
+                    Button("Done") {
+                        keyboardActive = false
+                    }
+                }
+            }
+        }
+        
         
         
     }

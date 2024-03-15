@@ -17,6 +17,8 @@ struct AddLogView: View {
     
     @State private var notes: Bool = false
     
+    @FocusState var keyboardActive: Bool
+    
     var body: some View {
         
         List {
@@ -25,6 +27,7 @@ struct AddLogView: View {
                 LabeledContent("Systolic:") {
                     TextField("Systolic", text: $log.systolic.toStringBinding())
                         .keyboardType(.numberPad)
+                        .focused($keyboardActive)
                 }
             }
             
@@ -32,6 +35,7 @@ struct AddLogView: View {
                 LabeledContent("Diastolic:") {
                     TextField("Diastolic", text: $log.diastolic.toStringBinding())
                         .keyboardType(.numberPad)
+                        .focused($keyboardActive)
                 }
             }
             
@@ -40,6 +44,7 @@ struct AddLogView: View {
                 LabeledContent("Pulse:") {
                     TextField("Pulse", text: $log.pulse.toStringBinding())
                         .keyboardType(.numberPad)
+                        .focused($keyboardActive)
                 }
             }
             
@@ -83,6 +88,17 @@ struct AddLogView: View {
         .onChange(of: notes) {
             if notes == false {
                 log.notes = nil
+            }
+        }
+        
+        .toolbar {
+            ToolbarItem(placement: .keyboard) {
+                HStack {
+                    Spacer()
+                    Button("Done") {
+                        keyboardActive = false
+                    }
+                }
             }
         }
         
