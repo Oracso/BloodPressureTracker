@@ -24,8 +24,13 @@ extension Log {
         DateFormatter.localizedString(from: date ?? .now, dateStyle: .medium, timeStyle: .short)
     }
     
-    public var listDate: String {
-        DateFormatter.localizedString(from: date ?? .now, dateStyle: .short, timeStyle: .short)
+    public var listDate: (date: String, time: String) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/mm/yy"
+        let dateString = formatter.string(from: date ?? .now)
+        formatter.dateFormat = "hh:mm a"
+        let time = formatter.string(from: date ?? .now)
+        return (dateString, time)
     }
     
     

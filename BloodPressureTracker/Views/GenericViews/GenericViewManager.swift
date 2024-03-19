@@ -91,10 +91,14 @@ extension GenericViewManager {
     
     static func logListRowView(_ object: Log) -> some View {
         HStack {
-            Text(object.listDate)
+            VStack {
+                Text(object.listDate.date)
+                Text(object.listDate.time)
+            }
             Spacer()
             BloodPressureReadingView(systolic: Double(object.systolicInt), diastolic: Double(object.diastolicInt), pulse: Double(object.pulseInt))
                 .fixedSize()
+            // TODO: How to keep the reading view in-line independent on values
         }
         .padding(.horizontal)
     }
