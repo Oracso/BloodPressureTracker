@@ -1,12 +1,12 @@
 # Blood Pressure Tracker
 
-<!-- <section align="center">
+<section align="center">
   <img src="PreviewAssets/ScreenRecording1.gif" width="230" title="App Simulator Example">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="PreviewAssets/ScreenRecording1.gif" width="200"  title="Title">
+  <img src="PreviewAssets/ScreenRecording2.gif" width="200"  title="Title">
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="PreviewAssets/ScreenRecording1.gif" width="175"  title="Title">
-</section> -->
+<img src="PreviewAssets/ScreenRecording3.gif" width="175"  title="Title">
+</section>
 
 ### Overview:
 
