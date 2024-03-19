@@ -10,6 +10,8 @@
 
 ### Overview:
 
+A blood pressure application that tracks changes in readings over time.
+
 ### Use Case:
 
 <details open>
