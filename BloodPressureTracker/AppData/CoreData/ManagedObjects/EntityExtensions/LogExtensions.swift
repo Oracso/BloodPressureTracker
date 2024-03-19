@@ -26,7 +26,7 @@ extension Log {
     
     public var listDate: (date: String, time: String) {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd/mm/yy"
+        formatter.dateFormat = "dd/MM/yy"
         let dateString = formatter.string(from: date ?? .now)
         formatter.dateFormat = "hh:mm a"
         let time = formatter.string(from: date ?? .now)
@@ -55,7 +55,7 @@ extension Log {
     
     public class func objectStoreFetchRequest() -> NSFetchRequest<Log> {
         let request = NSFetchRequest<Log>(entityName: "Log")
-            request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+            request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
         
         return request
     }
