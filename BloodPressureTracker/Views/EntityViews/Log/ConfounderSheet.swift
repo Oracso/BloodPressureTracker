@@ -18,6 +18,8 @@ struct ConfounderSheet: View {
         confoundersDic[confounder] = comments
     }
     
+    @FocusState var keyboardActive: Bool
+    
     var body: some View {
         
         NavigationStack {
@@ -26,10 +28,12 @@ struct ConfounderSheet: View {
             
             Section("Confounder") {
                 TextField("", text: $confounder)
+                    .focused($keyboardActive)
             }
             
             Section("Comments") {
                 TextField("", text: $comments)
+                    .focused($keyboardActive)
             }
             
             
