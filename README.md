@@ -10,9 +10,20 @@
 
 ### Overview:
 
-A blood pressure application that tracks changes in readings over time.
+A customisable blood pressure app that tracks changes in readings over time.
 
 ### Use Case:
+
+Customising the presentation of data in a way that is relevant and engaging supports the creation of usable insights. 
+
+
+
+By being able to X/design and filter
+
+being able to filter 
+
+
+
 
 <details open>
     <summary>Contents:</summary>
