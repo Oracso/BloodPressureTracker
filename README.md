@@ -17,12 +17,6 @@ A customisable blood pressure app that tracks changes in readings over time.
 Customising the presentation of data in a way that is relevant and engaging is key to the creation of usable insights. This can be achieved by granting users control of filtering variables as well as providng flexibility in design and appearance. Empowering users with this flexibility allows them to tailor their interface to align with their unique requirements, facilitating a more personalised analysis. Further, being able to tag readings with custom confounders incorporates additional contextual information that enhances the depth of understanding derived from the data. 
  
 
-
-
-
-
-
-
 <details open>
     <summary>Contents:</summary>
     <ul class="overview-section">
@@ -40,16 +34,48 @@ Customising the presentation of data in a way that is relevant and engaging is k
 
 ## Future Plans:
 
+#### - <ins>Theme Presets</ins>
+
+
+
+#### - <ins>Custom Chart Symbols</ins>
+
+#### - <ins>Confounder Search & Filtering</ins>
+
+#### - <ins>Complex Data Analysis</ins>
+
+
 
 
 ## Current Difficulties:
+
+#### - <ins>Maintaining list row layout independent of dynamic variables</ins>
+
+Using classic blood pressure reading view within a list causes variations as reading values differ. Need to rebuild view to fix size and placement within row to ensure consistency across the list.
+
+#### - <ins>FocusState influencing .sheet pop up</ins>
+
+Using @FocusState on a parent view to dismiss a decimal keyboard causes issues with the child .sheet pop up. When using a TextField within the sheet the view dismisses and relaunches itself. Adding a @FocusState directly to the .sheet's view seems to resolve the issue, however only temporarily, need further tests to determine which conditions cause the problem.
+
 
 
 ## Past Problems:
 
 
+#### - <ins>Loading colour presets using UserDefaults</ins>
 
-# Screenshots
+#### - <ins>Date filtering</ins>
+
+Resolved issues associated with filtering arrays between two dates. Have done so using conditional code and UI Date Picker limitations.
+
+
+#### - <ins>Simple Chart Data Type Filtering</ins>
+
+Had difficulty displaying data points on a *LineChart* whilst still allowing for design customisation. Due to project constraints I was unable to use the *series* variable of **LineMark** and so had to find another method of delineating between datatypes whilst also allowing for simple and smooth transitions between different types of Chart. Have essentially used a switch statement however still need to modularise and condense much of this code into view components and view modifiers.
+
+
+
+<!-- # Screenshots -->
 
 
 
