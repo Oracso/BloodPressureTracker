@@ -16,9 +16,9 @@ A customisable blood pressure app that tracks changes in readings over time.
 
 Customising the presentation of data in a way that is relevant and engaging is key to the creation of usable insights. 
 
-This can be achieved by granting users control of filtering variables as well as providng flexibility in design and appearance. 
+This can be achieved by granting users control of filtering variables as well as providing flexibility in design and appearance. 
 
-Empowering users with this flexibility allows them to tailor their interface to align with their unique requirements, facilitating a more personalised analysis. 
+Empowering users with this flexibility allows them to tailor and align their interface with their unique requirements, facilitating a more personalised analysis. 
 
 Further, being able to tag readings with custom confounders incorporates additional contextual information that enhances the depth of understanding derived from the data. 
  
