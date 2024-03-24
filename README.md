@@ -20,7 +20,7 @@ This can be achieved by granting users control of filtering variables as well as
 
 Empowering users with this flexibility allows them to tailor and align their interface with their unique requirements, facilitating a more personalised analysis. 
 
-Further, being able to tag readings with custom confounders incorporates additional contextual information that enhances the depth of understanding derived from the data. 
+Further, being able to tag readings with custom confounding variables incorporates additional contextual information that enhances the depth of understanding derived from the data. 
  
 
 <details open>
